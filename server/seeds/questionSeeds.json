@@ -1,0 +1,882 @@
+[
+    {
+        "category": "Walking-Working Surfaces",
+        "section": "1910.22(a)(1)",
+        "question": "Are all places of employment, passageways, storerooms, service rooms, and walking-working surfaces kept in a clean, orderly, and sanitary condition?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Walking-Working Surfaces",
+        "section": "1910.22(a)(2)",
+        "question": "Is the floor of each workroom maintained in a clean and, to the extent feasible, in a dry condition?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Walking-Working Surfaces",
+        "section": "1910.22(a)(3)",
+        "question": "Are walking-working surfaces maintained free of hazards such as sharp or protruding objects, loose boards, corrosion, leaks, spills, snow, and ice?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Walking-Working Surfaces",
+        "section": "1910.22(c)",
+        "question": "Are employees provided, and does employer ensure each employee uses, a safe means of access and egress to and from walking-working surfaces?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Walking-Working Surfaces",
+        "section": "1910.22(d)(1)",
+        "question": "Are walking-working surfaces inspected, regularly and as necessary, and maintained in a safe condition?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Walking-Working Surfaces",
+        "section": "1910.22(d)(2)",
+        "question": "Are hazardous conditions on walking-working surfaces corrected or repaired before an employee uses the walking-working surface again?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Walking-Working Surfaces",
+        "section": "1910.22(d)(2)",
+        "question": "If the correction or repair cannot be made immediately, is the hazard guarded to prevent employees from using the walking-working surface until the hazard is corrected or repaired?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(b)(1)",
+        "question": "Are there at least two exit routes available in a workplace to permit prompt evacuation of employees and other building occupants during an emergency?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(b)(1)",
+        "question": "Are the exit routes located as far away as practical from each other so that if one exit route is blocked by fire or smoke, employees can evacuate using the second exit route?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(c)(1)",
+        "question": "Does each exit discharge lead directly outside or to a street, walkway, refuge area, public way, or open space with access to the outside?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(c)(2)",
+        "question": "Is the street, walkway, refuge area, public way, or open space to which an exit discharge leads large enough to accommodate the building occupants likely to use the exit route?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(d)",
+        "question": "Are all exit doors unlocked?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(d)(1)",
+        "question": "Are employees able to open an exit route door from the inside at all times without keys, tools, or special knowledge?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(d)(2)",
+        "question": "Are exit route doors free of any device or alarm that could restrict emergency use of the exit route if the device or alarm fails?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(e)",
+        "question": "Are all exit doors side-hinged?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(f)",
+        "question": "Is the capacity of all exit routes adequate?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(f)(2)",
+        "question": "Does the capacity of an exit route decrease in the direction of exit route travel to the exit discharge?",
+        "correctAnswer": "No",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(h)(1)",
+        "question": "Do all outdoor exit routes have guardrails to protect unenclosed sides if a fall hazard exists?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(h)(2)",
+        "question": "Are all outdoor exit routes covered if snow or ice is likely to accumulate along the route, or has the facility demonstrated that any snow or ice accumulation will be removed before it presents a slipping hazard?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(h)(3)",
+        "question": "Are all outdoor exit routes reasonably straight and have smooth, solid, substantially level walkways?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.36(h)(4)",
+        "question": "Do any outdoor exit routs have a dead-end that is longer than 20 feet (6.2 m)?",
+        "correctAnswer": "No",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(a)(1)",
+        "question": "Are exit routes kept free of explosive, highly flammable furnishings or other decorations?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(a)(3)",
+        "question": "Are exit routes free and unobstructed? ",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(a)(3)",
+        "question": "Has any materials or equipment been placed, either permanently or temporarily, within the exit route? ",
+        "correctAnswer": "No",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(a)(3)",
+        "question": "Does the exit-route access go through a room that can be locked, such as a bathroom, to reach an exit or exit discharge, or lead into a dead-end corridor.",
+        "correctAnswer": "No",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(a)(3)",
+        "question": " If the exit route is not substantially level, have stairs or a ramp been provided?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(a)(4)",
+        "question": "Are safeguards designed to protect employees during an emergency (e.g., sprinkler systems, alarm systems, fire doors, exit lighting) in proper working order?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(b)(1)",
+        "question": "Is each exit route adequately lighted so that an employee with normal vision can see along the exit route?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(b)(2)",
+        "question": "Is each exit clearly visible and marked by a sign reading 'Exit'?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(b)(3)",
+        "question": "Is each exit route door free of decorations or signs that obscure the visibility of the exit route door?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(b)(4)",
+        "question": "If the direction of travel to the exit or exit discharge is not immediately apparent, are signs posted along the exit access indicating the direction of travel to the nearest exit and exit discharge? ",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(b)(4)",
+        "question": "Is the line-of-sight to an exit sign clearly visible at all times?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(b)(5)",
+        "question": "Is each doorway or passage along an exit access that could be mistaken for an exit marked 'Not an Exit' or similar designation, or identified by a sign indicating its actual use (e.g., closet)?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(b)(6)",
+        "question": "Is each exit sign illuminated to a surface value of at least five foot-candles (54 lux) by a reliable light source and distinctive in color? Self-luminous or electroluminescent signs that have a minimum luminance surface value of at least .06 footlamberts (0.21 cd/m2) are permitted.",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(b)(7)",
+        "question": "Does each exit sign have the word 'Exit' in plainly legible letters not less than six inches (15.2 cm) high, with the principal strokes of the letters in the word 'Exit' not less than three-fourths of an inch (1.9 cm) wide?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Exit Routes",
+        "section": "1910.37(e)",
+        "question": "Is there an operable employee alarm system?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(a)",
+        "question": "Is there evicence of a written emergency action plan?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(b)",
+        "question": "Is the emergency action plan kept in the workplace, and available to employees for review?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(c)(1)",
+        "question": "Does the emergnecy action plan provide procedures for reporting a fire or other emergency?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(c)(2)",
+        "question": "Does the emergency action plan provide procedures for emergency evacuation, including type of evacuation and exit route assignments?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(c)(3)",
+        "question": "Does the emergency action plan provide procedures to be followed by employees who remain to operate critical plant operations before they evacuate?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(c)(4)",
+        "question": "Does the emergency action plan provide procedures to account for all employees after evacuation?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(c)(5)",
+        "question": "Does the emergency action plan provide procedures to be followed by employees performing rescue or medical duties?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(c)(6)",
+        "question": "Does the emergency action plan provide the name or job title of every employee who may be contacted by employees who need more information about the plan or an explanation of their duties under the plan?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(d)",
+        "question": "Does a maintained employee alarm system exist, and does the system use a distinctive signal for each purpose and comply with the requirements in § 1910.165.",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(e)",
+        "question": "Are employees designated and trained to assist in a safe and orderly evacuation of other employees?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(f)(1)",
+        "question": "Has the emergency action plan been reviewed with each employee covered by the plan when the plan was developed or the employee was assigned initially to a job?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(f)(2)",
+        "question": "Has the emergency action plan been reviewed with each employee covered by the plan when the employee's responsibilities under the plan change?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Emergency Planning",
+        "section": "1910.38(f)(3)",
+        "question": "Has the emergency action plan been reviewed with each employee covered by the plan when the plan is changed?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Storage of LPG",
+        "section": "1910.110(f)(6)(i)",
+        "question": "Are all containers at least 10 feet from any buildng on adjoining property, any sidewalk, or any busy thoroughfares? ",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Storage of LPG",
+        "section": "1910.110(f)(6)(i)",
+        "question": "If stored quantity of LP-Gas is more than 2,500 pounds, is storage area 10 feet from nearest building?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Storage of LPG",
+        "section": "1910.110(f)(6)(ii)",
+        "question": "Are containers in a suitable enclosure or otherwise protected against tampering?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(c)(1)",
+        "question": "Are all portable fire extinguishers mounted?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(c)(1)",
+        "question": "Are all portable fire extinguishers easily identifiable?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(c)(4)",
+        "question": "Are all portable fire extinguishers maintained in a fully charged and operable condition?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(c)(4)",
+        "question": "Are all portable fire extinguishers kept in their designated places at all times except during use?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(d)(1)",
+        "question": "Are all portable fire extinguishers selected and distributed based on the classes of anticipated workplace fires and on the size and degree of hazard which would affect their use?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(d)(2)",
+        "question": "Are all portable fire extinguishers for use by employees on Class A fires within a travel distance of 75 feet (22.9 m) or less from the employee?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(d)(4)",
+        "question": "Are all portable fire extinguishers for use by employees on Class B fires within a travel distance of 50 feet (15.2 m) or less from the Class B hazard area?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(e)(2)",
+        "question": "Is there evidence of a monthly visually inspection of all portable fire extinguishers?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(e)(3)",
+        "question": "Is there evidence of an annual maintenance check of all portable fire extinguishers?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(e)(3)",
+        "question": "Is there a record of an annual maintenance check of all portable fire extinguishers?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(f)(16)",
+        "question": "Is there evidence that required hydrostatic testing of fire extinguishers has been performed at the appropriate time intervals?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(g)(1)",
+        "question": "Where portable fire extinguishers are provided for employee use in the workplace, is there evidence of an educational program to familiarize employees with the general principles of fire extinguisher use and the hazards involved with incipient stage fire fighting?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Fire Protection",
+        "section": "1910.157(g)(2)",
+        "question": "Is portable fire extinguisher education provided upon initial employment and at least annually thereafter?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(a)(2)",
+        "question": "Do all powered industrial trucks meet the design and construction requirements for powered industrial trucks established in the 'American National Standard for Powered Industrial Trucks, Part II, ANSI B56.1-1969'?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(f)(2)",
+        "question": "Is the storage and handling of liquefied petroleum gas fuel in accordance with NFPA Storage and Handling of Liquefied Petroleum Gases (NFPA No. 58-1969)?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(i)(1)",
+        "question": "Is the 8-hour Time Weighted Average concentration level of carbon monoxide gas created by powered industrial truck operations les than 50ppm?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(k)(1)",
+        "question": "Are the brakes of highway trucks set and wheel chocks placed under the rear wheels to prevent the trucks from rolling while they are boarded with powered industrial trucks?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(l)(1)(i)",
+        "question": "Can each industrial truck operator provide evidence of the successful completion of the training on their specific industrial truck?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(l)(4)(iii)",
+        "question": "Is there evidence of an evaluation of each powered industrial truck operator's performance with an interval of less than 3 years?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(l)(6)",
+        "question": "Does the certification of the industrial truck operator include the name of the operator, the date of the training, the date of the evaluation, and the identity of the person(s) performing the training or evaluation?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(m)(5)(ii)",
+        "question": "If a powered industrial truck's operator is 25 ft. or more away from the vehicle which remains in their view, or the vehicle is not in their view,  are the load engaging means fully lowered, controls neutralized, power shut off, and brakes set?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(m)(5)(iii)",
+        "question": "If the operator of an industrial truck is dismounted and within 25 ft. of the truck still in his view, are load engaging means fully lowered, controls neutralized, and the brakes set?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(n)(4)",
+        "question": "Does the driver slow down and sound the horn at cross aisles and other locations where vision is obstructed? ",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(n)(4)",
+        "question": "If the load being carried obstructs forward view, does the driver travel with the load trailing?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(n)(6)",
+        "question": "Does the driver look in the direction of, and keep a clear view of the path of travel?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(n)(7)",
+        "question": "Does the driver ascend or dscend grades slowly?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(q)(7)",
+        "question": "Is there evidence of a daily examination of the industrial truck?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "category": "Material Handeling and Storage",
+        "section": "1910.178(q)(10)",
+        "question": "Is the industrial trucks kept in a clean condition, free of lint, excess oil, and grease?",
+        "correctAnswer": "Yes",
+        "answers": [
+            "n/a",
+            "Yes",
+            "No"
+        ]
+    }
+]   
