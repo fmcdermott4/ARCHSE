@@ -16,6 +16,3 @@ type Query {
 `;
 
 module.exports = typeDefs;
-
-
-
