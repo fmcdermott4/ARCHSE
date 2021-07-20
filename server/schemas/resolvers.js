@@ -7,7 +7,7 @@ const resolvers = {
     },
     questions: async () => {
       return Question.find();
-    },
+    }    
   },
 };
 
