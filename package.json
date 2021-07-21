@@ -2,7 +2,7 @@
   "name": "archse",
   "version": "1.0.0",
   "engines": {
-    "node": "16.x"
+    "node": "15.x"
   },
   "description": "",
   "main": "server/server.js",
@@ -10,9 +10,9 @@
     "start": "node server/server.js",
     "build": "cd client && npm run build",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "concurrently \"cd server && npm install\" \"cd client && npm install\"",
+    "preinstall": "cd server && npm i",
+    "install": "cd client && npm i",
     "seed": "cd server && npm run seed"
-    
   },
   "repository": {
     "type": "git",
