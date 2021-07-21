@@ -1,13 +1,19 @@
-const { Question } = require("../models");
+const { Question, User } = require("../models");
 
 const resolvers = {
   Query: {
-    question: async (parent, { questionId }) => {
-      return Question.findOne({ _id: questionId });
-    },
+    // question: async (parent, { questionId }) => {
+    //   return Question.findOne({ _id: questionId });
+    // },
     questions: async () => {
-      return Question.find();
-    }    
+      return await Question.find({});
+    },    
+    // user:  async (parent,{userId}) =>{
+    //   return User.findOne({_id: userId})
+    // },
+    users: async () =>{
+      return await User.find({});
+    }
   },
 };
 

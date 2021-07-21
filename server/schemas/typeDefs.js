@@ -9,9 +9,18 @@ type Question {
     correctAnswer: String
     answers: [String]
 }
+
+type User {
+    _id: ID
+    username: String
+    email: String
+    password: String
+    audits: [String]
+}
+
 type Query {
-    questions: [Question]!
-    question(questionId: ID!): Question
+    questions: [Question]
+    users: [User]
 }
 `;
 
