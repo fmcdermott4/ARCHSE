@@ -1,12 +1,7 @@
 const {Schema, model} = require('mongoose');
 
 const questionSchema = new Schema({
-    category:{
-        type: String,
-        required: true,
-        trim: true
-    },
-    section: {
+     section: {
         type: String,
         required: true,
         trim:true,

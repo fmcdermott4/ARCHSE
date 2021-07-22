@@ -2,12 +2,15 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
 type Question {
-    _id: ID
-    category: String
     section: String
     question: String
     correctAnswer: String
     answers: [String]
+}
+type Category {
+    _id: ID
+    category: String
+    questions: [Question]
 }
 
 type User {
@@ -19,7 +22,7 @@ type User {
 }
 
 type Query {
-    questions: [Question]
+    categories: [Category]
     users: [User]
 }
 `;

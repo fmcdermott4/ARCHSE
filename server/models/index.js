@@ -1,4 +1,5 @@
-const Question = require('./question');
+// const Question = require('./question');
 const User = require('./user');
+const Category = require('./category');
 
-module.exports={Question, User};
+module.exports={User, Category};
