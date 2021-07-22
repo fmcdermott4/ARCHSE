@@ -4,6 +4,11 @@
   "engines": {
     "node": "15.x"
   },
+  "buildpacks": [
+    {
+      "url": "mars/create-react-app"
+    }
+  ],
   "description": "",
   "main": "server.js",
   "scripts": {
