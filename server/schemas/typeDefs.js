@@ -12,32 +12,28 @@ type Category {
     category: String
     questions: [Question]
 }
-
-type User {
+type Profile {
     _id: ID
-    username: String
+    name: String
     email: String
     password: String
-    audits: [String]
+    audits: [String]!
 }
-
 type Auth {
     token: ID!
-    profile: User
+    profile: Profile
 }
-
 type Query {
-    categories: [Category]
-    users: [User]
-    user(userId: ID!): User
-    categoryById(_id : ID!):Category
-    me: User
+    categories:[Category]
+    categoryById(categoryId: ID!):Category
+    profiles: [Profile]!
+    profile(profileId: ID!): Profile
+    me: Profile
 }
-
 type Mutation {
-    addUser(name: String!, email: String!, password: String!): Auth
+    addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-}
-`;
+    removeProfile: Profile
+}`;
 
 module.exports = typeDefs;

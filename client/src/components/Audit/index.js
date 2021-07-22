@@ -1,2 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+
+const Audits = () => {
+    return(
+    <h1>Hello Audits</h1>
+    )
+};
+
+export default Audits;

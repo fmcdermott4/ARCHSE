@@ -6,18 +6,16 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
 import Home from './pages/Home';
-import Login from'./pages/Login';
 import Signup from './pages/Signup';
+import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import PageNotFound from './pages/PageNotFound';
-import Audits from './pages/Audits';
+import Profile from './pages/Profile';
+import Audits from './components/Audit';
 import Navigation from './components/Navigation';
 
 const httpLink = createHttpLink({
@@ -43,28 +41,33 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client = {client}>
+    <ApolloProvider client={client}>
       <Router>
-        <Header />
-        <Navigation />        
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route exact path="/signup">
-            <Signup />
-          </Route>
-          <Route exact path="/audits">
-            <Audits />
-          </Route>
-          <Route exact path='*'>
-            <PageNotFound />
-          </Route>
-        </Switch>
-        <Footer />        
+        <div className="flex-column justify-flex-start min-100-vh">
+          <Header />
+          <Navigation />
+          <div className="container">
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/signup">
+              <Signup />
+            </Route>
+            <Route exact path="/me">
+              <Profile />
+            </Route>
+            <Route exact path="/audits">
+              <Audits />
+            </Route>
+            <Route exact path="/profiles/:profileId">
+              <Profile />
+            </Route>
+          </div>
+          <Footer />
+        </div>
       </Router>
     </ApolloProvider>
   );
