@@ -1,8 +1,11 @@
 import React from 'react';
+import { useQuery } from '@apollo/client';
 
 const Audits = () => {
     return(
-        <h1>Audits</h1>
+        <div>
+        <h1>Available Audits</h1>
+        </div>
     )
 };
 
