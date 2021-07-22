@@ -43,8 +43,8 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {profileId ? `${profile.name}'s` : 'Your'} friends have endorsed these
-        skills...
+        { {profileId} ? `${profile.name}` : 'This person '} has completed the below audits:
+        
       </h2>      
     </div>
   );
