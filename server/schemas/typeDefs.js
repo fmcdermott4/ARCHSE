@@ -24,6 +24,7 @@ type User {
 type Query {
     categories: [Category]
     users: [User]
+    categoryById(_id : ID!):Category
 }
 `;
 
