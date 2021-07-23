@@ -7,8 +7,8 @@ const resolvers = {
     categories: async () => {
       return await Category.find({});
     },        
-    categoryById: async(parent, {_id}) =>{
-      return await Category.findOne({_id: _id})
+    category: async(parent, {categoryId}) =>{
+      return await Category.findOne({_id: categoryId})
     },
     profiles: async () => {
       return Profile.find();

@@ -8,23 +8,15 @@ const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">ARCHSE</Navbar.Brand>
+        <Navbar.Brand href="/">ARCCOM</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/signup">Sign Up</Nav.Link>
-            <Nav.Link href="/audits">Audits</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+          <Nav className="me-auto">            
+            <Nav.Link href="/audits">Conduct Audit</Nav.Link>
+            <NavDropdown title="Other Links" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+              <NavDropdown.Item href="/signup">Sign Up</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.arcaugusta.com/" target="_blank">ARC Augusta</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

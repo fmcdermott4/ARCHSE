@@ -25,7 +25,7 @@ type Auth {
 }
 type Query {
     categories:[Category]
-    categoryById(categoryId: ID!):Category
+    category(categoryId: ID!): Category
     profiles: [Profile]!
     profile(profileId: ID!): Profile
     me: Profile

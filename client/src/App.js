@@ -3,7 +3,7 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  // createHttpLink,
+  createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -15,13 +15,13 @@ import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Profile from './pages/Profile';
-import Audits from './components/Audit';
+import Audits from './pages/Audits';
 import Navigation from './components/Navigation';
 
-// const httpLink = createHttpLink({
-//   uri: '/graphql',
+const httpLink = createHttpLink({
+  uri: '/graphql',
   
-// });
+});
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists

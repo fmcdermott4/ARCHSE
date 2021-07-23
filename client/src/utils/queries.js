@@ -1,5 +1,35 @@
 import { gql } from '@apollo/client';
 
+export const QUERY_CATEGORIES = gql`
+query categories{
+  categories{
+    _id
+    category
+    questions{
+      section
+      question
+      answers
+      correctAnswer
+    }
+  }
+}
+`;
+
+export const QUERY_CATEGORY = gql`
+query category($id : ID!){
+  category(categoryId : $id){
+    _id
+    category
+    questions{
+      section
+      question
+      correctAnswer
+      answers
+    }
+  }
+}
+`;
+
 export const QUERY_PROFILES = gql`
   query allProfiles {
     profiles {
@@ -11,13 +41,14 @@ export const QUERY_PROFILES = gql`
 `;
 
 export const QUERY_SINGLE_PROFILE = gql`
-  query singleProfile($profileId: ID!) {
-    profile(profileId: $profileId) {
-      _id
-      name
-      audits
-    }
+query profile($id : ID!){
+  profile(profileId : $id){
+    _id
+    name
+    email
+    audits
   }
+}
 `;
 
 export const QUERY_ME = gql`
