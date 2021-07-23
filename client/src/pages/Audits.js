@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import AvailableAudits from '../components/AvailableAudits';
 import { QUERY_CATEGORIES } from '../utils/queries';
+import Auth from '../utils/auth';
 
 const Audits = () => {
     const { loading, data } = useQuery(QUERY_CATEGORIES);
@@ -9,8 +10,9 @@ const Audits = () => {
     
     return(
         <main>
-            <div>            
-                {loading ? (<div>Loading...</div>) : (<AvailableAudits categories={categories} title="Here are the available audits:" />)}
+            <div>
+                {(loading) ? (<div>Loading...</div>) : (<div></div>)}            
+                {Auth.loggedIn() ? (<AvailableAudits categories={categories} title="Here are the available audits:" />) : (<p1>Please <a href="/login">log in</a> to view this content.</p1>)}
             </div>
         </main>
     )
