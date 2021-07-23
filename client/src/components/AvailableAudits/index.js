@@ -20,7 +20,7 @@ const AvailableAudits = ({categories, title}) => {
 
                 <Link
                   className="btn btn-block btn-squared btn-light text-dark"
-                  to={`/profiles/${category._id}`}
+                  to={`/audits/${category._id}`}
                 >
                   Conduct audit
                 </Link>
