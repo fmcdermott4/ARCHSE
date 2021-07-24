@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/tech-friends',
@@ -11,3 +12,4 @@ mongoose.connect(
 );
 
 module.exports = mongoose.connection;
+// || 'mongodb://localhost/tech-friends',

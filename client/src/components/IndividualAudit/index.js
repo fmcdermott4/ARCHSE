@@ -4,6 +4,7 @@ import {useQuery} from '@apollo/client';
 import { QUERY_CATEGORY } from '../../utils/queries';
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
 
 
 
@@ -22,9 +23,9 @@ const IndividualAudit = () => {
             const block = question.answers.map((answer) =>{      
                 return(<option value={answer}>{answer}</option>)
             })
-            return(<Form.Group as={Row} className="mb-3">{question.question}<Form.Control as="select"><option>Please select an answer</option>{block}></Form.Control></Form.Group>);
+            return(<Form.Group as={Row} className="mb-3">{question.question}<Form.Control as="select"><option>Please select an answer</option>{block}</Form.Control></Form.Group>);
         })
-        return(<Form>{questions}</Form>);
+        return(<div><Form>{questions}</Form><div align="center"><Button variant="primary">Submit</Button></div></div>);
     }
     
     return(
