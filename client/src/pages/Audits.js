@@ -12,7 +12,7 @@ const Audits = () => {
         <main>
             <div>
                 {(loading) ? (<div>Loading...</div>) : (<div></div>)}            
-                {Auth.loggedIn() ? (<AvailableAudits categories={categories} title="Here are the available audits:" />) : (<p1>Please <a href="/login">log in</a> to view this content.</p1>)}
+                {Auth.loggedIn() ? (<AvailableAudits categories={categories} title="Here are the available audits:" />) : (<p>Please <a href="/login">log in</a> to view this content.</p>)}
             </div>
         </main>
     )

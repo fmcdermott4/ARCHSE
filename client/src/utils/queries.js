@@ -21,6 +21,7 @@ query category($id : ID!){
     _id
     category
     questions{
+      _id
       section
       question
       correctAnswer
