@@ -22,7 +22,8 @@ const IndividualAudit = () => {
         {
             variables: { id: categoryId },
         }
-    );    
+    );
+
     const answersState = (loading, data) =>{
         if(!loading){
         let el = {};
@@ -36,17 +37,23 @@ const IndividualAudit = () => {
         return(el)
         }
     };
-
+    
     const [formState, setFormState] = useState(answersState(loading, data));
 
+    const handleSelect = async (event) => {
+        if(!loading){
+            const {name, value} = event.target;
+            await setFormState({
+                ...formState,
+                [name]: value,
+                profile: myProfileId,
+                category: categoryId,
+                timeSubmitted: Date(),
+            })
+        }
+        console.log(formState)
+    };
 
-    const handleSelect = (event) => {
-        const {name, value} = event.target;
-        setFormState({
-            ...formState,
-            [name]: value,
-        })
-    }
     let questionsMap = (loading, data) => {
         if(!loading){
             let questions = data.category.questions.map((question) => {
@@ -55,15 +62,11 @@ const IndividualAudit = () => {
                     return(<option key={answer} value={answer}>{answer}</option>)
                 })
                 // return(<Form.Group as={Row} key={question._id} className="mb-3">{question.question}<Select id={question._id} onChange={this.handleSelect} title="name">{answerBlock}</Select><Dropdown.Divider /></Form.Group>);
-                return(<Form.Group as={Row} id={question._id} key={question._id} className="mb-3">{question.question}<Form.Control as="select" name={question._id} onChange={handleSelect}><option>Please select an answer</option>{answerBlock}</Form.Control></Form.Group>);
+                return(<Form.Group as={Row} id={question._id} key={question._id} className="mb-3">{question.question}<Form.Control as="select" name={question._id} onChange={handleSelect} defaultValue={question.answers[0]}>{answerBlock}</Form.Control></Form.Group>);
             })
             return(<div><Form>{questions}</Form><div align="center"><Button variant="primary">Submit</Button></div></div>);
         }
     };
-
-    // let questionsMap = (data) => {
-    //     return(<div></div>);
-    // }
     
     return(
         <div>
