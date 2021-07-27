@@ -43,7 +43,7 @@ const Profile = () => {
     <div>
       <h2 className="card-header">
         { {profileId} ? `${profile.name}` : 'This person '} has completed the below audits:
-        
+        {console.log(profile)}
       </h2>      
     </div>
   );

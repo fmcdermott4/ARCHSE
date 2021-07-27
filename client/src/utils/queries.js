@@ -35,6 +35,17 @@ export const QUERY_PROFILES = gql`
       _id
       name
       email
+      audits{
+        _id
+        profile
+        category
+        timeSubmitted
+        answers{
+          _id
+          question
+          answer
+        }
+      }
     }
   }
 `;
@@ -44,7 +55,17 @@ query profile($id : ID!){
     _id
     name
     email
-    
+    audits{
+      _id
+      profile
+      category
+      timeSubmitted
+      answers{
+        _id
+        question
+        answer
+      }
+    }
   }
 }
 `;
@@ -55,6 +76,17 @@ export const QUERY_ME = gql`
       _id
       name
       email
+      audits{
+        _id
+        profile
+        category
+        timeSubmitted
+        answers{
+          _id
+          question
+          answer
+        }
+      }
     }
   }
 `;
