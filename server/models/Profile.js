@@ -21,9 +21,30 @@ const profileSchema = new Schema({
   },
   audits: [
     {
-      type: String,
-      trim: true,
-    },
+      profile: {
+          type: String,
+          required: true,
+      },
+      category: {
+          type: String,
+          required: true
+      },
+      timeSubmitted: {
+          type: String,
+          required: true
+      },
+      answers: [
+          {
+              question: { 
+                  type: String
+              },
+              answer: { 
+                  type: String
+              }
+          }
+      ]
+  
+  },
   ],
 });
 

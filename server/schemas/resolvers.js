@@ -40,7 +40,8 @@ const resolvers = {
     },
     submitAudit: async (parent, {profile, category, timeSubmitted, answers}) => {
       const audit = await Audit.create({profile, category, timeSubmitted, answers});
-      return(audit);
+      const updateProfile = await Profile.findOneAndUpdate({_id: profile}, {$push: {"audits": audit}})
+      return(updateProfile);
     },
     login: async (parent, { email, password }) => {
       const profile = await Profile.findOne({ email });
