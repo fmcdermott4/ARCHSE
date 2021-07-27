@@ -97,9 +97,9 @@ const IndividualAudit = () => {
                     return(<option key={answer} value={answer}>{answer}</option>)
                 })
                 // return(<Form.Group as={Row} key={question._id} className="mb-3">{question.question}<Select id={question._id} onChange={this.handleSelect} title="name">{answerBlock}</Select><Dropdown.Divider /></Form.Group>);
-                return(<Form.Group as={Row} id={question._id} key={question._id} className="mb-3">{question.question}<Form.Control as="select" name={question._id} onChange={handleSelect} defaultValue={question.answers[0]}>{answerBlock}</Form.Control></Form.Group>);
+                return(<Form.Group as={Row} id={question._id} key={question._id} className="mb-3">{question.question}<Form.Control as="select" name={question._id} onChange={handleSelect} defaultValue=""><option disabled key="" value=""></option>{answerBlock}</Form.Control></Form.Group>);
             })
-            return(<div><Form>{questions}</Form><div align="center"><Button variant="primary" href="/" onClick={handleFormSubmit}>Submit</Button></div></div>);
+            return(<div><Form>{questions}</Form><div align="center"><Button variant="primary" onClick={handleFormSubmit}>Submit</Button></div></div>);
         }
     };
     

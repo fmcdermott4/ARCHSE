@@ -10,8 +10,8 @@ db.once('open', async () =>{
         await Category.create(questionSeeds);
         await Profile.deleteMany({});
         await Profile.create(profileSeeds);
-        await Audit.deleteMany({});
-        await Audit.create(auditSeeds);
+        // await Audit.deleteMany({});
+        // await Audit.create(auditSeeds);
 
         console.log("Successfully seeded!");
         process.exit(0);
