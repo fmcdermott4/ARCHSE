@@ -34,7 +34,7 @@ export const QUERY_PROFILES = gql`
     profiles {
       _id
       name
-      audits
+      email
     }
   }
 `;
@@ -44,7 +44,7 @@ query profile($id : ID!){
     _id
     name
     email
-    audits
+    
   }
 }
 `;
@@ -54,7 +54,7 @@ export const QUERY_ME = gql`
     me {
       _id
       name
-      audits
+      email
     }
   }
 `;

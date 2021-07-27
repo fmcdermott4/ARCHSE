@@ -18,7 +18,7 @@ type Profile {
     name: String
     email: String
     password: String
-    audits: [String]!
+    audits: [Audit]
 }
 type Auth {
     token: ID!
@@ -44,7 +44,7 @@ type AnsweredQuestion {
 type Query {
     categories:[Category]
     category(categoryId: ID!): Category
-    profiles: [Profile]!
+    profiles: [Profile]
     profile(profileId: ID!): Profile
     me: Profile
     audits: [Audit]
