@@ -47,7 +47,8 @@ type Query {
     profiles: [Profile]!
     profile(profileId: ID!): Profile
     me: Profile
-    audit: Audit
+    audits: [Audit]
+    audit(auditId: ID!): Audit
 }
 type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth

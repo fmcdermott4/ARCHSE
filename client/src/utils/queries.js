@@ -14,7 +14,6 @@ query categories{
   }
 }
 `;
-
 export const QUERY_CATEGORY = gql`
 query category($id : ID!){
   category(categoryId : $id){
@@ -30,7 +29,6 @@ query category($id : ID!){
   }
 }
 `;
-
 export const QUERY_PROFILES = gql`
   query allProfiles {
     profiles {
@@ -40,7 +38,6 @@ export const QUERY_PROFILES = gql`
     }
   }
 `;
-
 export const QUERY_SINGLE_PROFILE = gql`
 query profile($id : ID!){
   profile(profileId : $id){
@@ -58,6 +55,38 @@ export const QUERY_ME = gql`
       _id
       name
       audits
+    }
+  }
+`;
+
+export const QUERY_AUDITS = gql`
+  query audits{
+    audits{
+      _id
+      profile
+      category
+      timeSubmitted
+      answers{
+        _id
+        question
+        answer
+      }
+    }
+  }
+`;
+
+export const QUERY_AUDIT = gql`
+  query audit($id : ID!){
+    audit(auditId : $id){
+      _id
+      profile
+      category
+      timeSubmitted
+      answers{
+        _id
+        question
+        answer
+      }
     }
   }
 `;

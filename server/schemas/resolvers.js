@@ -13,7 +13,6 @@ const resolvers = {
     profiles: async () => {
       return Profile.find();
     },
-
     profile: async (parent, { profileId }) => {
       return Profile.findOne({ _id: profileId });
     },
@@ -23,7 +22,14 @@ const resolvers = {
         return Profile.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    audits: async () => {
+      return await Audit.find({});
+    },
+    audit: async (parent, {auditId}) => {
+      return await Audit.findOne({_id: auditId})
     }
+
   },
   Mutation: {
     addProfile: async (parent, { name, email, password }) => {
