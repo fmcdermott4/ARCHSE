@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory} from 'react-router-dom';
 import {useQuery, useMutation} from '@apollo/client';
 import { QUERY_CATEGORY} from '../../utils/queries';
 import Form from "react-bootstrap/Form";
@@ -12,7 +12,13 @@ import {SUBMIT_AUDIT} from "../../utils/mutations";
 
 
 
+
+
+
+
+
 const IndividualAudit = () => {
+    const history = useHistory();
     const now = () => {
         var today = new Date();
         var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -47,8 +53,6 @@ const IndividualAudit = () => {
             for( let i=0; i < formState.answers.length ; i++){
                 if(name === formState.answers[i].question){
                     formState.answers.splice(i,1);
-                    console.log("Match at " + i + " index removed")
-                    
                 } 
             };
             formState.answers.push({question : name , answer : value});
@@ -58,27 +62,31 @@ const IndividualAudit = () => {
                 category: categoryId,
                 timeSubmitted: now(),
             });
-            console.log(formState);
+            
         }
     };
     // define submitAudit
-    const [submitAudit, { error, auditData}] = useMutation(SUBMIT_AUDIT);
+    const [submitAudit, { error }] = useMutation(SUBMIT_AUDIT);
     if(error){
         console.log(error)
     }
     //submit form 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(formState);
-        
-        try {
-            const { auditData } = await submitAudit({
-                variables: {...formState},
-            });
-        } catch {
-
+        console.log(formState.answers.length);
+        console.log(data.category.questions.length)
+        if(formState.answers.length === data.category.questions.length){
+            try {
+                await submitAudit({
+                    variables: {...formState},
+                })
+                .then(alert("Successfully submitted")).then(history.push("/"))
+            } catch {
+                console.log("error")
+            }
+        } else {
+            alert("Please answer all questions before submitting")
         }
-        return(auditData)
     };
 
     let questionsMap = (loading, data) => {
@@ -91,7 +99,7 @@ const IndividualAudit = () => {
                 // return(<Form.Group as={Row} key={question._id} className="mb-3">{question.question}<Select id={question._id} onChange={this.handleSelect} title="name">{answerBlock}</Select><Dropdown.Divider /></Form.Group>);
                 return(<Form.Group as={Row} id={question._id} key={question._id} className="mb-3">{question.question}<Form.Control as="select" name={question._id} onChange={handleSelect} defaultValue={question.answers[0]}>{answerBlock}</Form.Control></Form.Group>);
             })
-            return(<div><Form>{questions}</Form><div align="center"><Button variant="primary" onClick={handleFormSubmit}>Submit</Button></div></div>);
+            return(<div><Form>{questions}</Form><div align="center"><Button variant="primary" href="/" onClick={handleFormSubmit}>Submit</Button></div></div>);
         }
     };
     
