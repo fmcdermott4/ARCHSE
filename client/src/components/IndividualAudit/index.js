@@ -24,35 +24,43 @@ const IndividualAudit = () => {
         }
     );
 
-    const answersState = (loading, data) =>{
-        if(!loading){
+    const answersState = (loading, data) =>{        
         let el = {};
         el.profile = myProfileId;
         el.category = categoryId;
+        el.answers = [];
         el.timeSubmitted = new Date();
-        for ( let i = 0; i < data.category.questions.length; i++) {
-            let index = data.category.questions[i]._id
-            el[index] = '';
-        }
         return(el)
-        }
-    };
+            };
     
     const [formState, setFormState] = useState(answersState(loading, data));
 
     const handleSelect = async (event) => {
         if(!loading){
             const {name, value} = event.target;
+            for( let i=0; i < formState.answers.length ; i++){
+                if(name === formState.answers[i][0].question){
+                    formState.answers.splice(i,1);
+                    console.log("Match at " + i + " index removed")
+                    
+                } 
+            };
+            formState.answers.push([{question : name , answer : value}]);
             await setFormState({
                 ...formState,
-                [name]: value,
                 profile: myProfileId,
                 category: categoryId,
                 timeSubmitted: Date(),
-            })
+            });
+            console.log(formState);
         }
-        console.log(formState)
     };
+
+    //submit form 
+    // const handleFormSubmit = async (event) => {
+    //     event.preventDefault();
+    //     console.log(formState)
+    // }
 
     let questionsMap = (loading, data) => {
         if(!loading){

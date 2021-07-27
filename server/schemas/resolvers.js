@@ -1,4 +1,4 @@
-const { Category, Profile} = require("../models");
+const { Category, Profile, Audit} = require("../models");
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
@@ -31,6 +31,10 @@ const resolvers = {
       const token = signToken(profile);
 
       return { token, profile };
+    },
+    submitAudit: async (parent, {profile, category, timeSubmitted, answers}) => {
+      const audit = await Audit.create({profile, category, timeSubmitted, answers});
+      return(audit);
     },
     login: async (parent, { email, password }) => {
       const profile = await Profile.findOne({ email });
