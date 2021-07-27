@@ -10,7 +10,7 @@ const auditSchema = new Schema({
         required: true
     },
     timeSubmitted: {
-        type: Date,
+        type: String,
         required: true
     },
     answers: [

@@ -29,9 +29,14 @@ type Audit {
     profile: String
     category: String
     timeSubmitted: String
-    answers: [AnsweredQuestions]
+    answers: [AnsweredQuestion]
 }
-type AnsweredQuestions {
+input AnswerInput {
+    _id: ID
+    question: String
+    answer: String
+}
+type AnsweredQuestion {
     _id: ID
     question: String
     answer: String
@@ -48,7 +53,7 @@ type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     removeProfile: Profile
-    submitAudit(profile: ID!, category: String!, timeSubmitted: String!, answers: [String]!): Audit
+    submitAudit(profile: String!, category: String!, timeSubmitted: String!, answers: [AnswerInput]): Audit
 }`;
 
 module.exports = typeDefs;
