@@ -67,6 +67,9 @@ function App() {
             <Route exact path="/audits/:categoryId">
               <IndividualAudit />
             </Route>
+            <Route exact path ="/profile/:userId">
+              <Profile />
+            </Route>
           </div>
           <Footer />
         </div>

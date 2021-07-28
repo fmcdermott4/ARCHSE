@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { QUERY_ME } from '../../utils/queries';
+import { useQuery } from '@apollo/client';
 
 import Auth from '../../utils/auth';
 
@@ -9,6 +11,14 @@ const Header = () => {
     Auth.logout();
     window.location.href='/';
   };
+  const { loading, data } = useQuery(QUERY_ME);
+  let myProfile
+  if(loading){
+    myProfile = "/"
+  } 
+  if(!loading){
+    myProfile = "/profile/" + data.me._id;
+  }   
   return (
     <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
       <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
@@ -23,7 +33,7 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/me">
+              <Link className="btn btn-lg btn-primary m-2" to={myProfile}>
                 View My Profile
               </Link>
               <button className="btn btn-lg btn-light m-2" onClick={logout}>

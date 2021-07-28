@@ -20,7 +20,7 @@ const ProfileList = ({ profiles, title }) => {
 
                 <Link
                   className="btn btn-block btn-squared btn-light text-dark"
-                  to={`/profiles/${profile._id}`}
+                  to={`/profile/${profile._id}`}
                 >
                   View profile.
                 </Link>
