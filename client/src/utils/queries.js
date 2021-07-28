@@ -38,7 +38,11 @@ export const QUERY_PROFILES = gql`
       email
       audits{
         _id
-        timeSubmitted      
+        timeSubmitted
+        facility{
+          _id
+          facility
+        }
         category{
           _id
           category
@@ -66,7 +70,11 @@ export const QUERY_SINGLE_PROFILE = gql`
       email
       audits{
         _id
-        timeSubmitted      
+        timeSubmitted
+        facility{
+          _id
+          facility
+        }
         category{
           _id
           category

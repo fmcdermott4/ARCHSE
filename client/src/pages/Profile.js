@@ -49,6 +49,7 @@ const Profile = () => {
     )
   } else{
     const profile = data.profile;
+    console.log(profile);
     return(    
     <div>     
         <h2>{profile.name}'s profile page.</h2>
@@ -62,7 +63,7 @@ const Profile = () => {
               <h4>Date Conducted</h4>
             </Col>
             <Col>
-              <h4>Audit Catgory</h4>
+              <h4>Audit Category</h4>
             </Col>
             <Col>
               <h4>Audit Result</h4>

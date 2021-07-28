@@ -11,10 +11,10 @@ const resolvers = {
       return await Category.findOne({_id: categoryId}).populate("questions");
     },
     profiles: async () => {
-      return Profile.find().populate("audits").populate({path:"audits", populate:"category"});
+      return Profile.find().populate("audits").populate({path:"audits", populate:"category facility"});
     },
     profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId }).populate("audits").populate({path:"audits", populate:"category"});
+      return Profile.findOne({ _id: profileId }).populate("audits").populate({path:"audits", populate:"category facility"});
     },
     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
@@ -24,10 +24,10 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     audits: async () => {
-      return await Audit.find({}).populate("category").populate("profile");
+      return await Audit.find({}).populate("profile category facility");
     },
     audit: async (parent, {auditId}) => {
-      return await Audit.findOne({_id: auditId}).populate("category").populate("profile");
+      return await Audit.findOne({_id: auditId}).populate("profile category facility");
     },
     facilities: async () => {
       return await Facility.find({});
