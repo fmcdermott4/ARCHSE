@@ -79,7 +79,7 @@ const IndividualAudit = () => {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
 
-        if(formState.answers.length === data.category.questions.length){
+        if((formState.answers.length === data.category.questions.length) &&(formState.facility.length > 0) ){
             try {
                 await submitAudit({
                     variables: {...formState},
@@ -89,7 +89,11 @@ const IndividualAudit = () => {
                 console.log("error")
             }
         } else {
+            if(formState.facility.length > 0){
             alert("Please answer all questions before submitting")
+            } else{
+                alert("Please input facility for this audit")
+            }
         }
     };
 

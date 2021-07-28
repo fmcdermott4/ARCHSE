@@ -49,16 +49,16 @@ const Profile = () => {
     )
   } else{
     const profile = data.profile;
-    console.log(profile);
+    
     return(    
     <div>     
         <h2>{profile.name}'s profile page.</h2>
         <br/><br/>
         <Container>
           <Row>
-            {/* <Col>
-              <h4>Audit ID</h4>
-            </Col> */}
+            <Col>
+              <h4>Audit Location</h4>
+            </Col>
             <Col>
               <h4>Date Conducted</h4>
             </Col>
@@ -73,9 +73,9 @@ const Profile = () => {
           {profile.audits.map((audit) =>{
             return(
               <Row key={audit._id}>
-                {/* <Col>
-                  <p>{audit._id}</p>
-                </Col> */}
+                <Col>
+                  <p>{audit.facility.facility}</p>
+                </Col>
                 <Col>
                   <p>{audit.timeSubmitted}</p>
                 </Col>
