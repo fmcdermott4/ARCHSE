@@ -2,6 +2,9 @@ import React from 'react';
 
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 import { QUERY_SINGLE_PROFILE} from '../utils/queries';
@@ -48,48 +51,47 @@ const Profile = () => {
     const profile = data.profile;
     return(    
     <div>     
-        <h2>User {profile.name}'s profile page.</h2>
-        <p>completed audits</p>
-        
-        <div>{profile.audits.map((audit)=>{
-          return(<p key={audit._id}>{audit.timeSubmitted} {audit.category.category} {auditResult(audit)}</p>)
-        })}</div>
+        <h2>{profile.name}'s profile page.</h2>
+        <br/><br/>
+        <Container>
+          <Row>
+            {/* <Col>
+              <h4>Audit ID</h4>
+            </Col> */}
+            <Col>
+              <h4>Date Conducted</h4>
+            </Col>
+            <Col>
+              <h4>Audit Catgory</h4>
+            </Col>
+            <Col>
+              <h4>Audit Result</h4>
+            </Col>
+            <hr/>
+          </Row>
+          {profile.audits.map((audit) =>{
+            return(
+              <Row key={audit._id}>
+                {/* <Col>
+                  <p>{audit._id}</p>
+                </Col> */}
+                <Col>
+                  <p>{audit.timeSubmitted}</p>
+                </Col>
+                <Col>
+                  <p>{audit.category.category}</p>
+                </Col>
+                <Col>
+                  <p>{auditResult(audit)}</p>
+                </Col>
+                <hr/>
+              </Row>
+            )  
+          })}             
+        </Container>
     </div>
   )
-  }
-  
-  
-  // // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
-  // const profile = data?.profile || {};
-  // if(!loading){
-  //   console.log(data)
-  // }
-  // // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
-  // if (Auth.loggedIn() && Auth.getProfile().data._id === profileId) {
-  //   return <Redirect to="/me" />;
-  // }
-
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // if (!profile?.name) {
-  //   return (
-  //     <h4>
-  //       You need to be logged in to see your profile page. Use the navigation
-  //       links above to sign up or log in!
-  //     </h4>
-  //   );
-  // }
-
-  // return (
-  //   <div>
-  //     <h2 className="card-header">
-  //       { {profileId} ? `${profile.name}` : 'This person '} has completed the below audits:
-  //       {console.log(profile)}
-  //     </h2>      
-  //   </div>
-  // );
+  }  
 };
 
 export default Profile;
