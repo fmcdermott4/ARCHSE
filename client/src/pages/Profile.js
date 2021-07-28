@@ -17,7 +17,23 @@ const Profile = () => {
       variables: {id: profileId },
     }
   );
-  
+  const auditResult = (audit) => {
+    const questionNum = audit.category.questions.length;
+    let correctAns = 0;
+    for(let i = 0; i < questionNum; i++) {
+      let questionId = audit.category.questions[i]._id;
+      let correctAnswer = audit.category.questions[i].correctAnswer
+      for(let z = 0; z < questionNum; z++){
+        let answerId = audit.answers[z].question;
+        let answer = audit.answers[z].answer;
+        if(questionId === answerId && correctAnswer === answer){
+          correctAns++;
+          console.log(correctAns);
+        }
+      }
+    };
+    return(correctAns + "/" + questionNum)
+  }
   
   if(loading){
     return(
@@ -25,13 +41,13 @@ const Profile = () => {
     )
   } else{
     const profile = data.profile;
-    console.log(profile);
     return(    
     <div>     
         <h2>User {profile.name}'s profile page.</h2>
         <p>completed audits</p>
+        
         <div>{profile.audits.map((audit)=>{
-          return(<p key={audit._id}>{audit._id}</p>)
+          return(<p key={audit._id}>{audit.timeSubmitted} {audit.category.category} {auditResult(audit)}</p>)
         })}</div>
     </div>
   )
