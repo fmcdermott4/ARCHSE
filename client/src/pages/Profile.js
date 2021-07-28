@@ -18,18 +18,26 @@ const Profile = () => {
   const auditResult = (audit) => {
     const questionNum = audit.category.questions.length;
     let correctAns = 0;
+    let nA = 0;
+    for(let z = 0; z < questionNum; z++){
+      let answer = audit.answers[z].answer;
+      if(answer === "n/a"){
+        nA++;
+      }
+    }  
     for(let i = 0; i < questionNum; i++) {
       let questionId = audit.category.questions[i]._id;
       let correctAnswer = audit.category.questions[i].correctAnswer
+      
       for(let z = 0; z < questionNum; z++){
         let answerId = audit.answers[z].question;
         let answer = audit.answers[z].answer;
         if(questionId === answerId && correctAnswer === answer){
           correctAns++;
         }
-      }
+      }      
     };
-    return(correctAns + "/" + questionNum)
+    return(correctAns + "/" + (questionNum - nA))
   }
   
   if(loading){

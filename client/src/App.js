@@ -8,6 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Auth from './utils/auth';
 
 import Home from './pages/Home';
 import Signup from './pages/Signup';
@@ -42,6 +43,21 @@ const client = new ApolloClient({
 });
 
 function App() {
+  if(!Auth.loggedIn()){
+    return(
+      <ApolloProvider client={client}>
+        {console.log(Auth.loggedIn())}
+        <Router>
+        <div className="flex-column justify-flex-start min-100-vh">
+          <Header /> 
+          <div className="container">
+            <Login />
+          </div>
+        </div>
+        </Router>
+      </ApolloProvider>
+    )
+  }
   return (
     <ApolloProvider client={client}>
       <Router>
