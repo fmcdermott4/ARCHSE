@@ -5,16 +5,16 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     categories: async () => {
-      return await Category.find({}).populate("questions");
+      return await Category.find({}).populate("questions").populate({path:"audits", populate:"category"});
     },        
     category: async(parent, {categoryId}) =>{
-      return await Category.findOne({_id: categoryId}).populate("questions");
+      return await Category.findOne({_id: categoryId}).populate("questions").populate({path:"audits", populate:"category"});
     },
     profiles: async () => {
-      return Profile.find();
+      return Profile.find().populate("audits");
     },
     profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
+      return Profile.findOne({ _id: profileId }).populate("audits");
     },
     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
@@ -24,10 +24,10 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     audits: async () => {
-      return await Audit.find({}).populate("category", "profile");
+      return await Audit.find({}).populate("category").populate("profile");
     },
     audit: async (parent, {auditId}) => {
-      return await Audit.findOne({_id: auditId}).populate("category", "profile")
+      return await Audit.findOne({_id: auditId}).populate("category").populate("profile");
     }
 
   },
