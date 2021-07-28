@@ -38,6 +38,22 @@ export const QUERY_PROFILES = gql`
       email
       audits{
         _id
+        timeSubmitted      
+        category{
+          _id
+          category
+          questions{
+            _id
+            section
+            question
+            correctAnswer
+          }
+        }
+        answers{
+          _id
+          question
+          answer
+        }
       }
     }
   }
@@ -50,6 +66,22 @@ export const QUERY_SINGLE_PROFILE = gql`
       email
       audits{
         _id
+        timeSubmitted      
+        category{
+          _id
+          category
+          questions{
+            _id
+            section
+            question
+            correctAnswer
+          }
+        }
+        answers{
+          _id
+          question
+          answer
+        }
       }
     }
   }
