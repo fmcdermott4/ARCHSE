@@ -1,21 +1,12 @@
 import React, { useState } from 'react';
 import { useParams, useHistory} from 'react-router-dom';
 import {useQuery, useMutation} from '@apollo/client';
-import { QUERY_CATEGORY} from '../../utils/queries';
+import { QUERY_CATEGORY, QUERY_FACILITIES} from '../../utils/queries';
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Auth from '../../utils/auth';
 import {SUBMIT_AUDIT} from "../../utils/mutations";
-
-
-
-
-
-
-
-
-
 
 const IndividualAudit = () => {
     const history = useHistory();
@@ -35,7 +26,8 @@ const IndividualAudit = () => {
             variables: { id: categoryId },
         }
     );
-
+    const categoryData = data;
+    
     const answersState = (loading, data) =>{        
         let el = {};
         el.profile = myProfileId;
@@ -101,17 +93,30 @@ const IndividualAudit = () => {
             return(<div><Form>{questions}</Form><div align="center"><Button variant="primary" onClick={handleFormSubmit}>Submit</Button></div></div>);
         }
     };
-    
-    return(
-        <div>
-            {(loading) ?
-                (<h2>Loading...</h2>) :
-                (<h2>{data.category.category}</h2>            
-                )
-            }
-            {(loading) ? (<div></div>) : (questionsMap(loading, data))}
-        </div>
-    )
+    if(loading){
+        return<h2>Loading...</h2>
+    } else{
+        return(
+            <div>
+                {(loading) ?
+                    (<h2>Loading...</h2>) :
+                    (<h2>{data.category.category}</h2>            
+                    )
+                }
+                {(loading) ? (<div></div>) : (questionsMap(loading, data))}
+            </div>
+        )
+    }
+    // return(
+    //     <div>
+    //         {(loading) ?
+    //             (<h2>Loading...</h2>) :
+    //             (<h2>{data.category.category}</h2>            
+    //             )
+    //         }
+    //         {(loading) ? (<div></div>) : (questionsMap(loading, data))}
+    //     </div>
+    // )
 
     
     

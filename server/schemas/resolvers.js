@@ -1,4 +1,4 @@
-const { Category, Profile, Audit} = require("../models");
+const { Category, Profile, Audit, Facility} = require("../models");
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
@@ -28,7 +28,10 @@ const resolvers = {
     },
     audit: async (parent, {auditId}) => {
       return await Audit.findOne({_id: auditId}).populate("category").populate("profile");
-    }
+    },
+    facilities: async () => {
+      return await Facility.find({});
+    },
 
   },
   Mutation: {
@@ -38,8 +41,8 @@ const resolvers = {
 
       return { token, profile };
     },
-    submitAudit: async (parent, {profile, category, timeSubmitted, answers}) => {
-      const audit = await Audit.create({profile, category, timeSubmitted, answers});
+    submitAudit: async (parent, {profile, category, timeSubmitted, answers, facility}) => {
+      const audit = await Audit.create({profile, category, timeSubmitted, answers, facility});
       const updateProfile = await Profile.findOneAndUpdate({_id: profile}, {$push: {audits: audit._id}})
       return(updateProfile);
     },

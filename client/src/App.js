@@ -46,14 +46,13 @@ function App() {
   if(!Auth.loggedIn()){
     return(
       <ApolloProvider client={client}>
-        {console.log(Auth.loggedIn())}
         <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header /> 
-          <div className="container">
-            <Login />
+          <div className="flex-column justify-flex-start min-100-vh">
+            <Header /> 
+            <div className="container">
+              <Login />
+            </div>
           </div>
-        </div>
         </Router>
       </ApolloProvider>
     )

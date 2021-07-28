@@ -104,6 +104,10 @@ export const QUERY_AUDITS = gql`
   query audits{
     audits{
       _id
+      facility{
+        _id
+        facility
+      }
       profile{
         _id
         name
@@ -133,6 +137,10 @@ export const QUERY_AUDIT = gql`
   query audit($id : ID!){
     audit(auditId: $id){
     _id
+    facility{
+      _id
+      facility
+    }
       profile{
         _id
         name
@@ -154,6 +162,15 @@ export const QUERY_AUDIT = gql`
         question
         answer
       }      
+    }
+  }
+`;
+
+export const QUERY_FACILITIES = gql`
+  query facilities{
+    facilities{
+      _id
+      facility
     }
   }
 `;

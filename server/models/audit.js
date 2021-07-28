@@ -15,6 +15,11 @@ const auditSchema = new Schema({
         type: String,
         required: true
     },
+    facility: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref:"Facility",
+    },
     answers: [
         {
             question: { 
