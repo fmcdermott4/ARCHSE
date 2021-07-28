@@ -1,12 +1,10 @@
 import React from 'react';
 
-import { Redirect, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 
 import { QUERY_SINGLE_PROFILE} from '../utils/queries';
-
-import Auth from '../utils/auth';
 
 const Profile = () => {
   const profileId = useParams().userId;
@@ -28,7 +26,6 @@ const Profile = () => {
         let answer = audit.answers[z].answer;
         if(questionId === answerId && correctAnswer === answer){
           correctAns++;
-          console.log(correctAns);
         }
       }
     };
