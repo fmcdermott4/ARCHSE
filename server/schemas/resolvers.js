@@ -5,10 +5,10 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     categories: async () => {
-      return await Category.find({});
+      return await Category.find({}).populate("questions");
     },        
     category: async(parent, {categoryId}) =>{
-      return await Category.findOne({_id: categoryId})
+      return await Category.findOne({_id: categoryId}).populate("questions");
     },
     profiles: async () => {
       return Profile.find();
@@ -24,10 +24,10 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     audits: async () => {
-      return await Audit.find({});
+      return await Audit.find({}).populate("category", "profile");
     },
     audit: async (parent, {auditId}) => {
-      return await Audit.findOne({_id: auditId})
+      return await Audit.findOne({_id: auditId}).populate("category", "profile")
     }
 
   },
@@ -40,7 +40,7 @@ const resolvers = {
     },
     submitAudit: async (parent, {profile, category, timeSubmitted, answers}) => {
       const audit = await Audit.create({profile, category, timeSubmitted, answers});
-      const updateProfile = await Profile.findOneAndUpdate({_id: profile}, {$push: {"audits": audit}})
+      const updateProfile = await Profile.findOneAndUpdate({_id: profile}, {$push: {audits: audit._id}})
       return(updateProfile);
     },
     login: async (parent, { email, password }) => {

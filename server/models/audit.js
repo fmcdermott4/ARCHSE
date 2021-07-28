@@ -2,12 +2,14 @@ const {Schema, model} = require('mongoose');
 
 const auditSchema = new Schema({
     profile: {
-        type: String,
+        type: Schema.Types.ObjectId,
         required: true,
+        ref:"Profile",
     },
     category: {
-        type: String,
-        required: true
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref:"Category",
     },
     timeSubmitted: {
         type: String,

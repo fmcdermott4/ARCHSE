@@ -24,7 +24,7 @@ export const LOGIN_USER = gql`
 `;
 
 export const SUBMIT_AUDIT = gql`
-  mutation submitAudit($profile: String!, $category: String!, $timeSubmitted: String!, $answers: [AnswerInput]) {
+  mutation submitAudit($profile: ID!, $category: ID!, $timeSubmitted: String!, $answers: [AnswerInput]) {
     submitAudit(profile: $profile, category: $category, timeSubmitted: $timeSubmitted, answers: $answers){
       _id
     }

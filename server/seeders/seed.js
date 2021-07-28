@@ -6,11 +6,11 @@ const auditSeeds = require('./auditSeeds.json');
 
 db.once('open', async () =>{
     try{
-        await Category.deleteMany({});
-        await Category.create(questionSeeds);
+        // await Category.deleteMany({});
+        // await Category.create(questionSeeds);
         await Profile.deleteMany({});
         await Profile.create(profileSeeds);
-        // await Audit.deleteMany({});
+        await Audit.deleteMany({});
         // await Audit.create(auditSeeds);
 
         console.log("Successfully seeded!");
