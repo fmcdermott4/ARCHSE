@@ -73,8 +73,7 @@ const IndividualAudit = () => {
     //submit form 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(formState.answers.length);
-        console.log(data.category.questions.length)
+
         if(formState.answers.length === data.category.questions.length){
             try {
                 await submitAudit({

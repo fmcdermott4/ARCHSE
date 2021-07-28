@@ -12,11 +12,11 @@ const Header = () => {
     window.location.href='/';
   };
   const { loading, data } = useQuery(QUERY_ME);
-  let myProfile
+  let myProfile;
   if(loading){
     myProfile = "/"
   } 
-  if(!loading){
+  if(Auth.loggedIn() && !loading){
     myProfile = "/profile/" + data.me._id;
   }   
   return (
