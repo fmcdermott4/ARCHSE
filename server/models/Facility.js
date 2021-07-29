@@ -1,7 +1,5 @@
 const {Schema, model} = require('mongoose');
 
-
-
 const facilitySchema = new Schema({
     facility:{
         type: String,

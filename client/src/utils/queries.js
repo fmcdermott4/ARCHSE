@@ -38,6 +38,8 @@ export const QUERY_PROFILES = gql`
       _id
       name
       email
+      access
+      active
       audits{
         _id
         timeSubmitted
@@ -71,6 +73,8 @@ export const QUERY_SINGLE_PROFILE = gql`
       _id
       name
       email
+      access
+      active
       audits{
         _id
         timeSubmitted
@@ -98,20 +102,20 @@ export const QUERY_SINGLE_PROFILE = gql`
     }
   }
 `;
-
 export const QUERY_ME = gql`
   query me {
     me {
       _id
       name
       email
+      access
+      active
       audits{
         _id
       }
     }
   }
 `;
-
 export const QUERY_AUDITS = gql`
   query audits{
     audits{
@@ -145,7 +149,6 @@ export const QUERY_AUDITS = gql`
     }
 }
 `;
-
 export const QUERY_AUDIT = gql`
   query audit($id : ID!){
     audit(auditId: $id){
@@ -179,7 +182,6 @@ export const QUERY_AUDIT = gql`
     }
   }
 `;
-
 export const QUERY_FACILITIES = gql`
   query facilities{
     facilities{
@@ -188,7 +190,6 @@ export const QUERY_FACILITIES = gql`
     }
   }
 `;
-
 export const QUERY_AUDIT_TYPES = gql`
   query auditTypes{
     auditTypes{
@@ -197,7 +198,6 @@ export const QUERY_AUDIT_TYPES = gql`
     }
   }
 `;
-
 export const QUERY_AUDIT_TYPE = gql`
   query auditType($id : ID!){
     auditType(auditTypeId : $id){
@@ -206,7 +206,6 @@ export const QUERY_AUDIT_TYPE = gql`
     }
   }
 `;
-
 export const QUERY_CATEGORY_BY_AUDIT_TYPE = gql`
   query categoryByAuditType($auditType : String){
     categoryByAuditType(auditType : $auditType){

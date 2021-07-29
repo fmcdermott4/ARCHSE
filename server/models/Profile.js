@@ -19,6 +19,16 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  access: {
+    type: String,
+    required: true,
+    default: "user"
+  },
+  active: {
+    type: Boolean,
+    required: true,
+    default: true
+  },
   audits: [
     {
       type: Schema.Types.ObjectId,

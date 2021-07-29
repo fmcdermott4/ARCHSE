@@ -6,6 +6,8 @@ type Profile {
     name: String
     email: String
     password: String
+    access: String
+    active: Boolean
     audits: [Audit]
 }
 type Audit {

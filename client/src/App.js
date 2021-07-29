@@ -54,7 +54,12 @@ function App() {
           <div className="flex-column justify-flex-start min-100-vh">
             <Header /> 
             <div className="container">
+            <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/signup">
+              <Signup />
+            </Route>
             </div>
           </div>
         </Router>

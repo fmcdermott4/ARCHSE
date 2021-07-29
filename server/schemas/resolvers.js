@@ -1,4 +1,4 @@
-const { Category, Profile, Audit, Facility, AuditType} = require("../models");
+const { Category, Profile, Audit, Facility, AuditType, UserStatus} = require("../models");
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
@@ -41,7 +41,6 @@ const resolvers = {
     auditType: async (parent, {auditTypeId}) =>{
       return await AuditType.findOne({_id: auditTypeId});
     }
-
   },
   Mutation: {
     addProfile: async (parent, { name, email, password }) => {
