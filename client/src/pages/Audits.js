@@ -4,6 +4,8 @@ import AvailableAudits from '../components/AvailableAudits';
 import { QUERY_AUDIT_TYPES, QUERY_CATEGORY_BY_AUDIT_TYPE } from '../utils/queries';
 import Auth from '../utils/auth';
 import Form from 'react-bootstrap/Form'
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 const { useState } = React;
 
@@ -36,11 +38,15 @@ const Audits = () => {
         
     return(
         <main>
-            <div>
-                {(loading) ? (<div>Loading...</div>) : (auditTypesButton(data))}  
-                
-                <AuditSelected category={selected}/>        
-                
+            <div><Row>
+                    <Col>
+                        {(loading) ? (<div>Loading...</div>) : (auditTypesButton(data))}  
+                        <br/>
+                        <hr/>
+                        <AuditSelected category={selected}/>        
+                    </Col>
+                    
+                </Row>
             </div>
         </main>
     )
@@ -61,7 +67,7 @@ const AuditSelected = (selected) => {
         <div>
             {(loading) ? (<div>Loading...</div>) : (<div></div>)} 
 
-            {Auth.loggedIn() ? (<AvailableAudits categories={categories} title="Available audits:" />) : (<p>Please <a href="/login">log in</a> to view this content.</p>)}
+            {Auth.loggedIn() ? (<AvailableAudits categories={categories} title="Available audits" />) : (<p>Please <a href="/login">log in</a> to view this content.</p>)}
         </div>
     )
 }

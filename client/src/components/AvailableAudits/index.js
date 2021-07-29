@@ -14,7 +14,7 @@ const AvailableAudits = ({categories, title}) => {
             <div className="flex-row justify-space-between my-4">
         {categories &&
           categories.map((category) => (
-            <div key={category._id} className="col-12 col-xl-6">
+            <div key={category._id} >
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0">
                   {category.category} <br />
