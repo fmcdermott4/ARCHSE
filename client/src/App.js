@@ -19,6 +19,7 @@ import Profile from './pages/Profile';
 import Audits from './pages/Audits';
 import Navigation from './components/Navigation';
 import IndividualAudit from './components/IndividualAudit';
+import Certifications from './pages/Certifications';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -75,6 +76,9 @@ function App() {
             </Route>
             <Route exact path="/me">
               <Profile />
+            </Route>
+            <Route exact path="/certifications">
+              <Certifications />
             </Route>
             <Route exact path="/audits">
               <Audits />
