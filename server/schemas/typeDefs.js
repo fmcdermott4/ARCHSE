@@ -57,6 +57,7 @@ input AnswerInput {
 type Query {
     categories:[Category]
     category(categoryId: ID!): Category
+    categoryByAuditType(auditType: String): [Category]
     profiles: [Profile]
     profile(profileId: ID!): Profile
     me: Profile
@@ -64,6 +65,7 @@ type Query {
     audit(auditId: ID!): Audit
     facilities:[Facility]
     auditTypes:[AuditType]
+    auditType(auditTypeId: ID!): AuditType
 }
 type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth

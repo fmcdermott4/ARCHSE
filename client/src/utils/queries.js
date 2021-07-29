@@ -188,3 +188,38 @@ export const QUERY_FACILITIES = gql`
     }
   }
 `;
+
+export const QUERY_AUDIT_TYPES = gql`
+  query auditTypes{
+    auditTypes{
+      _id
+      auditType
+    }
+  }
+`;
+
+export const QUERY_AUDIT_TYPE = gql`
+  query auditType($id : ID!){
+    auditType(auditTypeId : $id){
+      _id
+      auditType    
+    }
+  }
+`;
+
+export const QUERY_CATEGORY_BY_AUDIT_TYPE = gql`
+  query categoryByAuditType($auditType : String){
+    categoryByAuditType(auditType : $auditType){
+      _id
+      category
+      auditType
+      questions{
+        _id
+        section
+        question
+        correctAnswer
+        answers
+      }
+    }
+  }
+`;

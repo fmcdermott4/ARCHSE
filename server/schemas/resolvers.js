@@ -10,6 +10,9 @@ const resolvers = {
     category: async(parent, {categoryId}) =>{
       return await Category.findOne({_id: categoryId}).populate("questions");
     },
+    categoryByAuditType: async (parent, {auditType}) => {
+      return await Category.find({auditType: auditType}).populate("questions");
+    },
     profiles: async () => {
       return Profile.find().populate("audits").populate({path:"audits", populate:"category facility"});
     },
@@ -35,6 +38,9 @@ const resolvers = {
     auditTypes: async () => {
       return await AuditType.find({});
     },
+    auditType: async (parent, {auditTypeId}) =>{
+      return await AuditType.findOne({_id: auditTypeId});
+    }
 
   },
   Mutation: {
