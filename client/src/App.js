@@ -20,6 +20,9 @@ import Audits from './pages/Audits';
 import Navigation from './components/Navigation';
 import IndividualAudit from './components/IndividualAudit';
 import Certifications from './pages/Certifications';
+import Policies from './pages/Policies';
+import Standards from './pages/Standards';
+import Procedures from './pages/Procedures';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -76,6 +79,15 @@ function App() {
             </Route>
             <Route exact path="/me">
               <Profile />
+            </Route>
+            <Route exact path="/policies">
+              <Policies />
+            </Route>
+            <Route exact path="/standards">
+              <Standards />
+            </Route>
+            <Route exact path="/procedures">
+              <Procedures />
             </Route>
             <Route exact path="/certifications">
               <Certifications />
