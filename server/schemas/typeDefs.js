@@ -19,6 +19,7 @@ type Audit {
 type Category {
     _id: ID
     category: String
+    auditType: String
     questions: [Question]
 }
 type Question {
@@ -36,6 +37,10 @@ type AnsweredQuestion {
 type Facility {
     _id: ID
     facility: String
+}
+type AuditType {
+    _id: ID
+    auditType: String
 }
 
 type Auth {
@@ -58,6 +63,7 @@ type Query {
     audits: [Audit]
     audit(auditId: ID!): Audit
     facilities:[Facility]
+    auditTypes:[AuditType]
 }
 type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth

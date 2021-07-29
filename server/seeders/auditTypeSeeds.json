@@ -1,0 +1,20 @@
+[
+    {
+        "auditType" : "OSHA"
+    },
+    {
+        "auditType" : "ARC Safety"
+    },
+    {
+        "auditType" : "Receiving"
+    },
+    {
+        "auditType" : "Production"
+    },
+    {
+        "auditType" : "Quality Control"
+    },
+    {
+        "auditType" : "Quality Assurance"
+    }
+]

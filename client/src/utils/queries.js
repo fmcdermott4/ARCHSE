@@ -5,6 +5,7 @@ export const QUERY_CATEGORIES = gql`
     categories{
       _id
       category
+      auditType
       questions{
         _id
         section
@@ -20,6 +21,7 @@ export const QUERY_CATEGORY = gql`
     category(categoryId : $id){
       _id
       category
+      auditType
       questions{
         _id
         section
@@ -46,6 +48,7 @@ export const QUERY_PROFILES = gql`
         category{
           _id
           category
+          auditType
           questions{
             _id
             section
@@ -78,6 +81,7 @@ export const QUERY_SINGLE_PROFILE = gql`
         category{
           _id
           category
+          auditType
           questions{
             _id
             section
@@ -124,6 +128,7 @@ export const QUERY_AUDITS = gql`
       category{
         _id
         category
+        auditType
         questions{
           _id
           section
@@ -157,6 +162,7 @@ export const QUERY_AUDIT = gql`
       category{
         _id
         category
+        auditType
         questions{
           _id
           section

@@ -1,4 +1,4 @@
-const { Category, Profile, Audit, Facility} = require("../models");
+const { Category, Profile, Audit, Facility, AuditType} = require("../models");
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
@@ -31,6 +31,9 @@ const resolvers = {
     },
     facilities: async () => {
       return await Facility.find({});
+    },
+    auditTypes: async () => {
+      return await AuditType.find({});
     },
 
   },

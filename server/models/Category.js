@@ -8,6 +8,10 @@ const categorySchema = new Schema({
         required: true,
         trim: true
     },
+    auditType:{
+        type: String,
+        required: true
+    },
     questions: [
             {
             section: {
