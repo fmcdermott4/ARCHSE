@@ -88,7 +88,7 @@ const Profile = () => {
                 <hr/>
               </Row>
             )  
-          })}             
+          }).reverse()}             
         </Container>
     </div>
   )

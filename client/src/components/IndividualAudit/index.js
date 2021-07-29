@@ -12,11 +12,13 @@ import {SUBMIT_AUDIT} from "../../utils/mutations";
 const IndividualAudit = () => {
     const history = useHistory();
     const now = () => {
+        const right = (str, chr) =>{
+            return( str.slice(str.lemgth-chr, str.length))    
+        }
+
         var today = new Date();
-        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-        return(dateTime)
+        var date = today.getFullYear()+'-'+right(("0"+(today.getMonth()+1)), 2)+'-'+today.getDate();
+        return(date)
     }
     const { categoryId } = useParams();
     const myProfileId = Auth.getProfile().data._id;
