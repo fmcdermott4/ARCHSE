@@ -15,7 +15,8 @@ const certificationSchema = new Schema({
     },
     additionalData:{
         type: String,
-        trim: true
+        trim: true,
+        default: "Blank"
     }
 });
 

@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {QUERY_CERTIFICATIONS, QUERY_CERTIFICATION,QUERY_CERTIFICATIONS_BY_CLASS} from '../utils/queries';
 import {useQuery, useMutation} from '@apollo/client';
 import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 const CertificationsReview = () => {
 
@@ -44,8 +47,7 @@ const button = (data) =>{
 if(loading){
     return<div>Loading...</div>
 }
-    return(<div>
-        <p>Certifications Review</p>
+    return(<div>        
         {button(myCategories(data))}
         <AvailableTrainings category={selected} /> 
         </div>
@@ -62,11 +64,54 @@ const AvailableTrainings = (selected) => {
             variables: { certificationClass: selected.category}
         }
     )
+    const classDisplay = (certificationArray) =>{
+        const certificationArrayMap = (certificationArray) => certificationArray.map((certification)=>{
+            console.log(certification)
+            return(
+                <div key={certification._id}>
+                    <Row >
+                        <Col xs={3}>
+                            <p>{certification.name}</p>
+                        </Col>
+                        <Col xs={3}>
+                            <p>{certification.validity}</p>
+                        </Col>
+                        <Col xs={6}>
+                            <p>{certification.additionalData}</p>
+                        </Col>
+                    </Row>
+                    <hr/>
+                </div>
+            )
+        })
+        return(
+        <Container>
+            <Row key="header">
+                <Col xs={3}>
+                    <h4>Name</h4>
+                </Col>
+                <Col xs={3}>
+                    <h4>Validity</h4>
+                </Col>
+                <Col xs={6}>
+                    <h4>Description</h4>
+                </Col>
+            </Row>
+            <hr/>
+            {certificationArrayMap(certificationArray)}
+        </Container>)
+    };
 
     if(loading){
         return<div>Loading...</div>
     }
-    return<div>{console.log(data)}</div>
+    return(
+        <div>
+            <hr/>
+            {classDisplay(data.certificationByClass)}
+        </div>
+    )
+
 }
 
 export default CertificationsReview;
