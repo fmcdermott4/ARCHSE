@@ -1,4 +1,4 @@
-const { Category, Profile, Audit, Facility, AuditType, UserStatus} = require("../models");
+const { Category, Profile, Audit, Facility, AuditType, Certification} = require("../models");
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
@@ -40,6 +40,15 @@ const resolvers = {
     },
     auditType: async (parent, {auditTypeId}) =>{
       return await AuditType.findOne({_id: auditTypeId});
+    },
+    certifications: async() =>{
+      return await Certification.find({})
+    },
+    certification: async(parent, {certificationId})=>{
+      return await Certification.findOne({_id: certificationId})
+    },
+    certificationByClass: async(parent, {certificationClass}) =>{
+      return await Certification.find({class: certificationClass});
     }
   },
   Mutation: {

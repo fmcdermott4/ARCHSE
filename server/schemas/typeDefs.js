@@ -21,8 +21,10 @@ type Access {
 }
 type Certification {
     _id:ID
+    class: String
     name: String
     validity: Int
+    additionalData: String
 }
 type Audit {
     _id: ID
@@ -82,6 +84,9 @@ type Query {
     facilities:[Facility]
     auditTypes:[AuditType]
     auditType(auditTypeId: ID!): AuditType
+    certifications:[Certification]
+    certificationByClass(certificationClass: String!): [Certification]
+    certification(certificationId: ID!): Certification
 }
 type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth

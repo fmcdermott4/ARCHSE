@@ -276,3 +276,36 @@ export const QUERY_CATEGORY_BY_AUDIT_TYPE = gql`
     }
   }
 `;
+export const QUERY_CERTIFICATIONS = gql`
+  query certifications{
+    certifications{
+      _id
+      class
+      name
+      validity
+      additionalData
+    }
+  }
+`;
+export const QUERY_CERTIFICATIONS_BY_CLASS = gql`
+  query certificationByClass($certificationClass : String!){
+    certificationByClass(certificationClass: $certificationClass){
+      _id
+      class
+      name
+      validity
+      additionalData
+    }
+  }
+`;
+export const QUERY_CERTIFICATION = gql`
+  query certification($id:ID!){
+    certification(certificationId: $id){
+      _id
+      class
+      name
+      validity
+      additionalData
+    }
+  }
+`;

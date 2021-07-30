@@ -20,7 +20,8 @@ import Audits from './pages/Audits';
 import Navigation from './components/Navigation';
 import IndividualAudit from './components/IndividualAudit';
 import CertificationsCertify from './pages/CertificationsCertify';
-import CertificationsView from './pages/CertificationsView';
+import CertificationsCreate from './pages/CertificationsCreate';
+import CertificationsReview from './pages/CertificationsReview';
 import Policies from './pages/Policies';
 import Standards from './pages/Standards';
 import Procedures from './pages/Procedures';
@@ -100,8 +101,11 @@ function App() {
               <Route exact path="/certifications/certify">
                 <CertificationsCertify />
               </Route>
-              <Route exact path="/certifications/view">
-                <CertificationsView />
+              <Route exact path="/certifications/create">
+                <CertificationsCreate/>
+              </Route>
+              <Route exact path="/certifications/review">
+                <CertificationsReview/>
               </Route>
               <Route exact path="/audits">
                 <Audits />

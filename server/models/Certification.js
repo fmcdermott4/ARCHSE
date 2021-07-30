@@ -1,6 +1,9 @@
 const {Schema, model} = require('mongoose');
 
 const certificationSchema = new Schema({
+    class:{
+        type:String
+    },
     name:{
         type: String,
         required: true,
@@ -9,6 +12,10 @@ const certificationSchema = new Schema({
     validity: {
         type: Number,
         required: true
+    },
+    additionalData:{
+        type: String,
+        trim: true
     }
 });
 
