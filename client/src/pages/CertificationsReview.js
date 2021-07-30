@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {QUERY_CERTIFICATIONS, QUERY_CERTIFICATION,QUERY_CERTIFICATIONS_BY_CLASS} from '../utils/queries';
-import {useQuery, useMutation} from '@apollo/client';
+import {QUERY_CERTIFICATIONS, QUERY_CERTIFICATIONS_BY_CLASS} from '../utils/queries';
+import {useQuery} from '@apollo/client';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import CertificationModal from '../components/CertificationUpdateModal'
 
 const CertificationsReview = () => {
 
@@ -66,23 +67,24 @@ const AvailableTrainings = (selected) => {
     )
     const classDisplay = (certificationArray) =>{
         const certificationArrayMap = (certificationArray) => certificationArray.map((certification)=>{
-            console.log(certification)
-            return(
-                <div key={certification._id}>
-                    <Row >
-                        <Col xs={3}>
-                            <p>{certification.name}</p>
-                        </Col>
-                        <Col xs={3}>
-                            <p>{certification.validity}</p>
-                        </Col>
-                        <Col xs={6}>
-                            <p>{certification.additionalData}</p>
-                        </Col>
-                    </Row>
-                    <hr/>
-                </div>
-            )
+            return(<CertificationModal  key={certification._id} certification={certification}/>)
+            // return(<CertificationModal />)
+            // return(
+            //     <a key={certification._id} data-toggle="modal" href="#myModal">
+            //         <Row >
+            //             <Col xs={3}>
+            //                 <p>{certification.name}</p>
+            //             </Col>
+            //             <Col xs={3}>
+            //                 <p>{certification.validity}</p>
+            //             </Col>
+            //             <Col xs={6}>
+            //                 <p>{certification.additionalData}</p>
+            //             </Col>
+            //         </Row>
+            //         <hr/>
+            //     </a>
+            // )
         })
         return(
         <Container>
