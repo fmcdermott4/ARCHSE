@@ -47,10 +47,26 @@ if(loading){
     return(<div>
         <p>Certifications Review</p>
         {button(myCategories(data))}
+        <AvailableTrainings category={selected} /> 
         </div>
     )
         
     
+}
+
+const AvailableTrainings = (selected) => {
+
+    const {loading, data } = useQuery(
+        QUERY_CERTIFICATIONS_BY_CLASS,
+        {
+            variables: { certificationClass: selected.category}
+        }
+    )
+
+    if(loading){
+        return<div>Loading...</div>
+    }
+    return<div>{console.log(data)}</div>
 }
 
 export default CertificationsReview;
