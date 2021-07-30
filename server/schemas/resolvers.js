@@ -86,6 +86,10 @@ const resolvers = {
         return Profile.findOneAndDelete({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    updateCertification: async (parent, {id, name, validity, additionalData}) =>{
+      const updatedCert = await Certification.findOneAndUpdate({_id : id}, {name, validity, additionalData});
+      return(updatedCert);
     }
   }
 };

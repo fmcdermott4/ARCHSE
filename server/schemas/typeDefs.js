@@ -93,6 +93,7 @@ type Mutation {
     login(email: String!, password: String!): Auth
     removeProfile: Profile
     submitAudit(profile: ID!, category: ID!, timeSubmitted: String!, answers: [AnswerInput], facility: ID!): Audit
+    updateCertification(id: ID, name: String, validity: Int, additionalData: String): Certification
 }`;
 
 module.exports = typeDefs;

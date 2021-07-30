@@ -29,3 +29,14 @@ export const SUBMIT_AUDIT = gql`
     }
   }
 `;
+export const UPDATE_CERTIFICATION = gql`
+  mutation updateCertification($id:ID, $name:String,$validity:Int,$additionalData:String){
+    updateCertification(id:$id, name:$name, validity:$validity, additionalData:$additionalData){
+      _id
+      class
+      name
+      validity
+      additionalData
+    }
+  }
+`
