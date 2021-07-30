@@ -6,9 +6,23 @@ type Profile {
     name: String
     email: String
     password: String
-    access: String
-    active: Boolean
+    access: Access
+    certifications:[individualCertification]
     audits: [Audit]
+}
+type individualCertification {
+    certification: Certification
+        acquired: String
+        valid: Boolean
+}
+type Access {
+    level: String
+    activeUser: Boolean
+}
+type Certification {
+    _id:ID
+    name: String
+    validity: Int
 }
 type Audit {
     _id: ID

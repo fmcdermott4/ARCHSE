@@ -29,6 +29,26 @@ const profileSchema = new Schema({
     required: true,
     default: true
   },
+  certifications:[ 
+    {
+      certification: {
+        type: Schema.Types.ObjectId,
+        ref: "Certification"
+      },
+      acquired: {
+        type: String
+      },
+      valid: {
+        type: Boolean,
+        default: false
+      },
+      certifier:{
+        type: Schema.Types.ObjectId,
+        ref:"Profile"
+      }
+      
+    },
+  ],
   audits: [
     {
       type: Schema.Types.ObjectId,

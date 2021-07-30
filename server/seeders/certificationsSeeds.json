@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Box Cutter",
+        "validity": "91"
+    },
+    {
+        "name": "Fire Extenguisher",
+        "validity": "365"
+    },
+    {
+        "name": "Fork Lift Training",
+        "validity": "3650"
+    },
+    {
+        "name": "Fork Lift Evaluation",
+        "validity": "1095"
+    },
+    {
+        "name": "Pallet Wrapping",
+        "validity": "365"
+    },
+    {
+        "name": "Fire Drill",
+        "validity": "182"
+    }
+]

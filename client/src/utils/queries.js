@@ -33,39 +33,50 @@ export const QUERY_CATEGORY = gql`
   }
 `;
 export const QUERY_PROFILES = gql`
-  query profiles{
-    profiles{
-      _id
-      name
-      email
-      access
-      active
-      audits{
+query profiles{
+  profiles{
+    _id
+    name
+    email
+    access{
+      level
+      activeUser
+    }
+    certifications{
+      acquired
+      valid
+      certification{
         _id
-        timeSubmitted
-        facility{
+        name
+        validity
+      }      
+    }
+    audits{
+      category{
+        _id
+        category
+        auditType
+        questions{
           _id
-          facility
-        }
-        category{
-          _id
-          category
-          auditType
-          questions{
-            _id
-            section
-            question
-            correctAnswer
-          }
-        }
-        answers{
-          _id
+          section
           question
-          answer
+          correctAnswer
+          answers
         }
+      }
+      timeSubmitted
+      facility{
+        _id
+        facility
+      }
+      answers{
+        _id
+        question
+        answer
       }
     }
   }
+}
 `;
 export const QUERY_SINGLE_PROFILE = gql`
   query profile($id: ID!){
@@ -73,15 +84,20 @@ export const QUERY_SINGLE_PROFILE = gql`
       _id
       name
       email
-      access
-      active
-      audits{
-        _id
-        timeSubmitted
-        facility{
+      access{
+        level
+        activeUser
+      }
+      certifications{
+        acquired
+        valid
+        certification{
           _id
-          facility
-        }
+          name
+          validity
+        }      
+      }
+      audits{
         category{
           _id
           category
@@ -91,7 +107,13 @@ export const QUERY_SINGLE_PROFILE = gql`
             section
             question
             correctAnswer
+            answers
           }
+        }
+        timeSubmitted
+        facility{
+          _id
+          facility
         }
         answers{
           _id
@@ -108,13 +130,45 @@ export const QUERY_ME = gql`
       _id
       name
       email
-      access
-      active
+      access{
+        level
+        activeUser
+      }
+      certifications{
+        acquired
+        valid
+        certification{
+          _id
+          name
+          validity
+        }      
+      }
       audits{
-        _id
+        category{
+          _id
+          category
+          auditType
+          questions{
+            _id
+            section
+            question
+            correctAnswer
+            answers
+          }
+        }
+        timeSubmitted
+        facility{
+          _id
+          facility
+        }
+        answers{
+          _id
+          question
+          answer
+        }
       }
     }
-  }
+  }  
 `;
 export const QUERY_AUDITS = gql`
   query audits{

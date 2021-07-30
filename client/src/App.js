@@ -6,7 +6,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Auth from './utils/auth';
 
@@ -19,10 +19,12 @@ import Profile from './pages/Profile';
 import Audits from './pages/Audits';
 import Navigation from './components/Navigation';
 import IndividualAudit from './components/IndividualAudit';
-import Certifications from './pages/Certifications';
+import CertificationsCertify from './pages/CertificationsCertify';
+import CertificationsView from './pages/CertificationsView';
 import Policies from './pages/Policies';
 import Standards from './pages/Standards';
 import Procedures from './pages/Procedures';
+import PageNotFound from './pages/PageNotFound'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -73,39 +75,47 @@ function App() {
           <Header />
           <Navigation />
           <div className="container">
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/login">
-              <Login />
-            </Route>
-            <Route exact path="/signup">
-              <Signup />
-            </Route>
-            <Route exact path="/me">
-              <Profile />
-            </Route>
-            <Route exact path="/policies">
-              <Policies />
-            </Route>
-            <Route exact path="/standards">
-              <Standards />
-            </Route>
-            <Route exact path="/procedures">
-              <Procedures />
-            </Route>
-            <Route exact path="/certifications">
-              <Certifications />
-            </Route>
-            <Route exact path="/audits">
-              <Audits />
-            </Route>
-            <Route exact path="/audits/:categoryId">
-              <IndividualAudit />
-            </Route>
-            <Route exact path ="/profile/:userId">
-              <Profile />
-            </Route>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/login">
+                <Login />
+              </Route>
+              <Route exact path="/signup">
+                <Signup />
+              </Route>
+              <Route exact path="/me">
+                <Profile />
+              </Route>
+              <Route exact path="/policies">
+                <Policies />
+              </Route>
+              <Route exact path="/standards">
+                <Standards />
+              </Route>
+              <Route exact path="/procedures">
+                <Procedures />
+              </Route>
+              <Route exact path="/certifications/certify">
+                <CertificationsCertify />
+              </Route>
+              <Route exact path="/certifications/view">
+                <CertificationsView />
+              </Route>
+              <Route exact path="/audits">
+                <Audits />
+              </Route>
+              <Route exact path="/audits/:categoryId">
+                <IndividualAudit />
+              </Route>
+              <Route exact path ="/profile/:userId">
+                <Profile />
+              </Route>
+              <Route path ="*">
+                <PageNotFound />
+              </Route>
+            </Switch>
           </div>
           <Footer />
         </div>

@@ -15,7 +15,10 @@ const Navigation = () => {
             <Nav.Link href="/policies">Policies</Nav.Link>
             <Nav.Link href="/standards">Standards</Nav.Link>
             <Nav.Link href="/procedures">Procedures</Nav.Link>
-            <Nav.Link href="/certifications">Certifications</Nav.Link>
+            <NavDropdown title="Certifications" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/certifications/view">View</NavDropdown.Item>
+              <NavDropdown.Item href="/certifications/certify">Certify</NavDropdown.Item>              
+            </NavDropdown>
             <Nav.Link href="/audits">Audits</Nav.Link>            
             <NavDropdown title="Other Links" id="basic-nav-dropdown">
               <NavDropdown.Item href="/login">Login</NavDropdown.Item>
