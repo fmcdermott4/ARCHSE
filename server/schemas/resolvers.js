@@ -88,7 +88,6 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     updateCertification: async (parent, {id, name, validity, additionalData}) =>{
-      console.log(id)
       const updatedCert = await Certification.findByIdAndUpdate(id, {name, validity, additionalData});
       // ({id: id}, );
       return(updatedCert);

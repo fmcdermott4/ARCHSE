@@ -15,7 +15,7 @@ function MyVerticallyCenteredModal(props) {
   const stopProp = (e) => {
       e.stopPropagation();
     }
-    const [setCert, {error, data}] = useMutation(UPDATE_CERTIFICATION);
+    const [setCert] = useMutation(UPDATE_CERTIFICATION);
   const [formState, setFormState] = useState(
     {
       id : props.details._id,
@@ -35,13 +35,13 @@ function MyVerticallyCenteredModal(props) {
   };
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+    
     try{
       await setCert({
         variables: { ...formState},
-      }).then(alert("Successfully submitted")).then(props.onHide)
-    }catch(e){
-      console.log(e)
+      }).then(props.onHide).then(history.go(0))
+    }catch(error){
+      console.log(error)
     }
     
   };  
