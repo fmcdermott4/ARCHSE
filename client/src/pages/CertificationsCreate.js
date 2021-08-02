@@ -13,10 +13,10 @@ const CertificationsCreate = () => {
     const {loading, data } = useQuery(QUERY_CERTIFICATIONS)
 
     const [selected, setSelected] = useState({
-        name: "Placeholder",
+        name: "",
         validity: "180",
         additionalData: "",
-        class: "Safety"
+        class: "New"
     });
     
     const handleChange = async (event) => { 
@@ -45,11 +45,26 @@ const CertificationsCreate = () => {
             
             return<option key={el} value={el}>{el}</option>
         })
-        return(<Form.Group><Form.Group>Select Category</Form.Group><Form.Control as="select" name="class" defaultValue="Data" onChange={handleChange}>{data.map((el)=>{
+        return(<Form.Group><Form.Group>Select Category</Form.Group><Form.Control as="select" name="class" defaultValue="Data" onChange={handleChange}><option key="New" value="New">New</option>{data.map((el)=>{
             return<option key={el} value={el}>{el}</option>
-        })}<option key="New" value="New">New</option></Form.Control></Form.Group>)
+        })}</Form.Control></Form.Group>)
     }
-
+    const handleFormSubmit = async (event) =>{
+        event.preventDefault();
+        selected.validity=parseInt(selected.validity).toString();
+        if(selected.class === "New"){
+            selected.class = prompt("What is your new  certification category called?")
+        }
+        if(selected.name.length === 0){
+            selected.name = prompt("What is the name of your new certification?")
+        }
+        while(isNaN(selected.validity)){
+            console.log(selected.validity)
+            selected.validity = prompt("What is your certification validity in days?")
+        }
+        console.log(selected)
+    }
+;
     if(loading){
         return<div>Loading...</div>
     }
@@ -91,7 +106,7 @@ const CertificationsCreate = () => {
                         </Form.Group>
                     </Row>
                     <div align="center">
-                        <Button  variant="primary" type="submit">
+                        <Button onClick={handleFormSubmit} variant="primary" type="submit">
                             Submit
                         </Button>
                     </div> 
