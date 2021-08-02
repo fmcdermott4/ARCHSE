@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 import {QUERY_CERTIFICATIONS} from '../utils/queries';
-import {useQuery} from '@apollo/client';
+import {useQuery, useMutation} from '@apollo/client';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import {CREATE_CERTIFICATION} from '../utils/mutations';
+import { useHistory} from 'react-router-dom';
 
 
 
 const CertificationsCreate = () => {
+    const history = useHistory();
 
     const {loading, data } = useQuery(QUERY_CERTIFICATIONS)
 
@@ -48,7 +51,10 @@ const CertificationsCreate = () => {
         return(<Form.Group><Form.Group>Select Category</Form.Group><Form.Control as="select" name="certificationClass" defaultValue="Data" onChange={handleChange}><option key="New" value="New">New</option>{data.map((el)=>{
             return<option key={el} value={el}>{el}</option>
         })}</Form.Control></Form.Group>)
-    }
+    };
+
+    const [submitCertification, {error}] = useMutation(CREATE_CERTIFICATION);
+
     const handleFormSubmit = async (event) =>{
         event.preventDefault();
         selected.validity=parseInt(selected.validity).toString();
@@ -63,7 +69,16 @@ const CertificationsCreate = () => {
             console.log(selected.validity)
             selected.validity = prompt("What is your certification validity in days?")
         }
-        console.log(selected)
+        try{
+            await submitCertification({
+                variables: {...selected},
+            })
+            .then(alert("Successfully submitted")).then(history.go(0))
+        } catch {
+            console.log("error")
+        }
+        
+        
     }
 ;
     if(loading){

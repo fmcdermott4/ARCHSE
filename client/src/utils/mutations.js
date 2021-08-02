@@ -40,3 +40,15 @@ export const UPDATE_CERTIFICATION = gql`
     }
   }
 `
+
+export const CREATE_CERTIFICATION = gql`
+  mutation createCertification($name: String, $validity:String, $additionalData:String, $certificationClass:String){
+    createCertification(name:$name, validity:$validity, additionalData:$additionalData, certificationClass:$certificationClass){
+      _id
+      certificationClass
+      name
+      validity
+      additionalData
+    }
+  }
+`;
