@@ -26,15 +26,6 @@ const myCategories = (data) =>{
     return(array.filter(unique))
 };
 
-// const button = (data) =>{    
-//     const selectButton = (data) =>{
-//         return(data.certifications.map((data) =>{             
-//             return(<option key={data.class} value={data.class}>{data.class}</option>)
-//             }
-//         ))
-//     };    
-//     return(<Form><Form.Label>Select Category</Form.Label><Form.Control as="select" defaultValue="Data" onChange={handleChange}>{selectButton(data)}</Form.Control></Form>)
-// }
 const button = (data) =>{ 
     
     data.map((el)=>{
@@ -68,24 +59,7 @@ const AvailableTrainings = (selected) => {
     const classDisplay = (certificationArray) =>{
         const certificationArrayMap = (certificationArray) => certificationArray.map((certification)=>{
             return(<CertificationModal  key={certification._id} certification={certification}/>)
-            // return(<CertificationModal />)
-            // return(
-            //     <a key={certification._id} data-toggle="modal" href="#myModal">
-            //         <Row >
-            //             <Col xs={3}>
-            //                 <p>{certification.name}</p>
-            //             </Col>
-            //             <Col xs={3}>
-            //                 <p>{certification.validity}</p>
-            //             </Col>
-            //             <Col xs={6}>
-            //                 <p>{certification.additionalData}</p>
-            //             </Col>
-            //         </Row>
-            //         <hr/>
-            //     </a>
-            // )
-        })
+        });
         return(
         <Container>
             <Row key="header">
