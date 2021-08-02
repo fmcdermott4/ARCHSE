@@ -23,6 +23,7 @@ import CertificationsCertify from './pages/CertificationsCertify';
 import CertificationsCreate from './pages/CertificationsCreate';
 import CertificationsReview from './pages/CertificationsReview';
 import Policies from './pages/Policies';
+import GradingStandards from './pages/GradingStandards';
 import Standards from './pages/Standards';
 import Procedures from './pages/Procedures';
 import PageNotFound from './pages/PageNotFound'
@@ -94,6 +95,9 @@ function App() {
               </Route>
               <Route exact path="/standards">
                 <Standards />
+              </Route>
+              <Route exact path="/standards/gradingstandards">
+                <GradingStandards />
               </Route>
               <Route exact path="/procedures">
                 <Procedures />
