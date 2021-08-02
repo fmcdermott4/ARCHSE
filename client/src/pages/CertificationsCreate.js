@@ -52,13 +52,14 @@ const CertificationsCreate = () => {
     const handleFormSubmit = async (event) =>{
         event.preventDefault();
         selected.validity=parseInt(selected.validity).toString();
-        if(selected.class === "New"){
+        while(selected.class === "New" || selected.class === ""){
+            console.log(selected.class.length)
             selected.class = prompt("What is your new  certification category called?")
         }
-        if(selected.name.length === 0){
+        while(selected.name === ""){
             selected.name = prompt("What is the name of your new certification?")
         }
-        while(isNaN(selected.validity)){
+        while(isNaN(selected.validity) || selected.validity === "" || selected.validity < 1){
             console.log(selected.validity)
             selected.validity = prompt("What is your certification validity in days?")
         }
