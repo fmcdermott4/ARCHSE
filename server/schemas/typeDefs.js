@@ -23,7 +23,7 @@ type Certification {
     _id:ID
     class: String
     name: String
-    validity: Int
+    validity: String
     additionalData: String
 }
 type Audit {
@@ -93,7 +93,7 @@ type Mutation {
     login(email: String!, password: String!): Auth
     removeProfile: Profile
     submitAudit(profile: ID!, category: ID!, timeSubmitted: String!, answers: [AnswerInput], facility: ID!): Audit
-    updateCertification(id: ID, name: String, validity: Int, additionalData: String): Certification
+    updateCertification(id: ID, name: String, validity: String, additionalData: String): Certification
 }`;
 
 module.exports = typeDefs;

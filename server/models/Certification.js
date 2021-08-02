@@ -10,7 +10,7 @@ const certificationSchema = new Schema({
         trim: true
     },
     validity: {
-        type: Number,
+        type: String,
         required: true
     },
     additionalData:{

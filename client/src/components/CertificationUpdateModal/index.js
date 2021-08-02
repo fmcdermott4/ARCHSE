@@ -7,8 +7,11 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import {UPDATE_CERTIFICATION} from '../../utils/mutations';
 import {useMutation} from '@apollo/client';
+import { useHistory} from 'react-router-dom';
+
 
 function MyVerticallyCenteredModal(props) {
+  const history = useHistory();
   const stopProp = (e) => {
       e.stopPropagation();
     }
@@ -34,13 +37,13 @@ function MyVerticallyCenteredModal(props) {
     event.preventDefault();
     console.log(formState);
     try{
-      const {data} = await setCert({
+      await setCert({
         variables: { ...formState},
-      });
+      }).then(alert("Successfully submitted")).then(props.onHide)
     }catch(e){
       console.log(e)
     }
-
+    
   };  
 
 
@@ -56,7 +59,7 @@ function MyVerticallyCenteredModal(props) {
           <Form.Label>Name</Form.Label>
           <Form.Control type="text" name="name" defaultValue={props.details.name} onChange={handleChange}/>
           <Form.Label>Validity (days)</Form.Label>
-          <Form.Control type="integer" name="validity" defaultValue={props.details.validity} onChange={handleChange}/>
+          <Form.Control type="test" name="validity" defaultValue={props.details.validity} onChange={handleChange}/>
           <Form.Label>Description</Form.Label>
           <Form.Control type="text" as="textarea" name="additionalData" defaultValue={props.details.additionalData} onChange={handleChange}/>
         </Form>
