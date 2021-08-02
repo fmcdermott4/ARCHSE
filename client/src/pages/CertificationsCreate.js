@@ -1,20 +1,33 @@
 import React, {useState} from 'react';
-import {QUERY_CERTIFICATIONS, QUERY_CERTIFICATIONS_BY_CLASS} from '../utils/queries';
+import {QUERY_CERTIFICATIONS} from '../utils/queries';
 import {useQuery} from '@apollo/client';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
+
 
 
 const CertificationsCreate = () => {
 
     const {loading, data } = useQuery(QUERY_CERTIFICATIONS)
+
+    const [selected, setSelected] = useState({
+        name: "Placeholder",
+        validity: "180",
+        additionalData: "",
+        class: "Safety"
+    });
     
-    const [selected, setSelected] = useState("Safety");
-    const handleChange = (event) => { 
-        setSelected(event.target.value)    
+    const handleChange = async (event) => { 
+        
+
+        const {name, value} = event.target;
+        await setSelected({
+            ...selected,
+            [name] : value
+        })
+        console.log(selected)
     }
     const myCategories = (data) =>{
         let array = [];
@@ -26,17 +39,17 @@ const CertificationsCreate = () => {
         };
         return(array.filter(unique))
     };
-    
-    const button = (data) =>{ 
         
+    const button = (data) =>{ 
         data.map((el)=>{
+            
             return<option key={el} value={el}>{el}</option>
         })
-        return(<Form><Form.Label>Category</Form.Label><Form.Control as="select" defaultValue="Data" onChange={handleChange}>{data.map((el)=>{
+        return(<Form.Group><Form.Group>Select Category</Form.Group><Form.Control as="select" name="class" defaultValue="Data" onChange={handleChange}>{data.map((el)=>{
             return<option key={el} value={el}>{el}</option>
-        })}<option key="New" value="New">New</option></Form.Control></Form>)
+        })}<option key="New" value="New">New</option></Form.Control></Form.Group>)
     }
-    
+
     if(loading){
         return<div>Loading...</div>
     }
@@ -47,33 +60,34 @@ const CertificationsCreate = () => {
                     <hr/>
                     <Row>
                         <Col>
-                            <Form.Group className="mb-3" name="name">
+                            <Form.Group className="mb-3" >
                                 <Form.Label>Name</Form.Label>
-                                <Form.Control type="text" placeholder="Certification Name" />
+                                <Form.Control type="text" name="name" onChange={handleChange} placeholder="Certification Name" />
                             </Form.Group>
                         </Col>
                         <Col/>
                     </Row>           
                     
                     <Row>
+                        
                         <Col>{button(myCategories(data))}</Col>
                         <Col />
                     </Row>
                     <br/>
                     <Row>
                         <Col>
-                            <Form.Group className="mb-3" name="validity">
+                            <Form.Group className="mb-3" >
                                 <Form.Label>Validity in days</Form.Label>
-                                <Form.Control type="text" defaultValue="180" />
+                                <Form.Control type="text" name="validity" onChange={handleChange} defaultValue="180" />
                             </Form.Group>
                         </Col>
                         <Col/>
                     </Row>
                     <br/>
                     <Row>       
-                        <Form.Group className="mb-3" name="additionalData">
+                        <Form.Group className="mb-3" >
                             <Form.Label>Additional Information</Form.Label>
-                            <Form.Control as="textarea" rows={8} placeholder="Additional information for the certification"/>
+                            <Form.Control as="textarea" rows={8} name="additionalData" onChange={handleChange} placeholder="Additional information for the certification"/>
                         </Form.Group>
                     </Row>
                     <div align="center">
