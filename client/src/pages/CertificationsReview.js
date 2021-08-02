@@ -21,7 +21,7 @@ const myCategories = (data) =>{
         return self.indexOf(value) === index
     };    
     for (let i = 0; i < data.certifications.length; i++){
-        array.push(data.certifications[i].class)
+        array.push(data.certifications[i].certificationClass)
     };
     return(array.filter(unique))
 };

@@ -280,7 +280,7 @@ export const QUERY_CERTIFICATIONS = gql`
   query certifications{
     certifications{
       _id
-      class
+      certificationClass
       name
       validity
       additionalData
@@ -291,7 +291,7 @@ export const QUERY_CERTIFICATIONS_BY_CLASS = gql`
   query certificationByClass($certificationClass : String!){
     certificationByClass(certificationClass: $certificationClass){
       _id
-      class
+      certificationClass
       name
       validity
       additionalData
@@ -302,7 +302,7 @@ export const QUERY_CERTIFICATION = gql`
   query certification($id:ID!){
     certification(certificationId: $id){
       _id
-      class
+      certificationClass
       name
       validity
       additionalData

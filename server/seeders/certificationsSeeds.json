@@ -1,36 +1,36 @@
 [
     {
-        "class": "Safety",
+        "certificationClass": "Safety",
         "name": "Box Cutter",
         "validity": "91"
         
     },
     {
-        "class": "Safety",
+        "certificationClass": "Safety",
         "name": "Fire Extenguisher",
         "validity": "365"
         
     },
     {
-        "class": "Training",
+        "certificationClass": "Training",
         "name": "Fork Lift Training",
         "validity": "3650"
         
     },
     {
-        "class": "Training",
+        "certificationClass": "Training",
         "name": "Fork Lift Evaluation",
         "validity": "1095"
         
     },
     {
-        "class": "Training",
+        "certificationClass": "Training",
         "name": "Pallet Wrapping",
         "validity": "365"
         
     },
     {
-        "class": "Safety",
+        "certificationClass": "Safety",
         "name": "Fire Drill",
         "validity": "182"
         

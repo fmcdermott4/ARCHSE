@@ -48,7 +48,7 @@ const resolvers = {
       return await Certification.findOne({_id: certificationId})
     },
     certificationByClass: async(parent, {certificationClass}) =>{
-      return await Certification.find({class: certificationClass});
+      return await Certification.find({certificationClass: certificationClass});
     }
   },
   Mutation: {
@@ -89,8 +89,11 @@ const resolvers = {
     },
     updateCertification: async (parent, {id, name, validity, additionalData}) =>{
       const updatedCert = await Certification.findByIdAndUpdate(id, {name, validity, additionalData});
-      // ({id: id}, );
-      return(updatedCert);
+            return(updatedCert);
+    },
+    createCertification: async (parent,{name, validity, additionalData, certificationClass}) =>{
+      const createCert = await Certification.create({name, validity, additionalData, certificationClass});
+      return(createCert);
     }
   }
 };

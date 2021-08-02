@@ -21,7 +21,7 @@ type Access {
 }
 type Certification {
     _id:ID
-    class: String
+    certificationClass: String
     name: String
     validity: String
     additionalData: String
@@ -94,6 +94,7 @@ type Mutation {
     removeProfile: Profile
     submitAudit(profile: ID!, category: ID!, timeSubmitted: String!, answers: [AnswerInput], facility: ID!): Audit
     updateCertification(id: ID, name: String, validity: String, additionalData: String): Certification
+    createCertification(name: String, validity: String, additionalData: String, certificationClass: String): Certification
 }`;
 
 module.exports = typeDefs;

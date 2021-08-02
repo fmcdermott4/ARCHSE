@@ -1,7 +1,7 @@
 const {Schema, model} = require('mongoose');
 
 const certificationSchema = new Schema({
-    class:{
+    certificationClass:{
         type:String
     },
     name:{

@@ -33,7 +33,7 @@ export const UPDATE_CERTIFICATION = gql`
   mutation updateCertification($id:ID, $name:String,$validity:String,$additionalData:String){
     updateCertification(id:$id, name:$name, validity:$validity, additionalData:$additionalData){
       _id
-      class
+      certificationClass
       name
       validity
       additionalData

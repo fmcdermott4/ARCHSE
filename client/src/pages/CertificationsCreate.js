@@ -16,7 +16,7 @@ const CertificationsCreate = () => {
         name: "",
         validity: "180",
         additionalData: "",
-        class: "New"
+        certificationClass: "New"
     });
     
     const handleChange = async (event) => { 
@@ -35,7 +35,7 @@ const CertificationsCreate = () => {
             return self.indexOf(value) === index
         };    
         for (let i = 0; i < data.certifications.length; i++){
-            array.push(data.certifications[i].class)
+            array.push(data.certifications[i].certificationClass)
         };
         return(array.filter(unique))
     };
@@ -45,16 +45,16 @@ const CertificationsCreate = () => {
             
             return<option key={el} value={el}>{el}</option>
         })
-        return(<Form.Group><Form.Group>Select Category</Form.Group><Form.Control as="select" name="class" defaultValue="Data" onChange={handleChange}><option key="New" value="New">New</option>{data.map((el)=>{
+        return(<Form.Group><Form.Group>Select Category</Form.Group><Form.Control as="select" name="certificationClass" defaultValue="Data" onChange={handleChange}><option key="New" value="New">New</option>{data.map((el)=>{
             return<option key={el} value={el}>{el}</option>
         })}</Form.Control></Form.Group>)
     }
     const handleFormSubmit = async (event) =>{
         event.preventDefault();
         selected.validity=parseInt(selected.validity).toString();
-        while(selected.class === "New" || selected.class === ""){
-            console.log(selected.class.length)
-            selected.class = prompt("What is your new  certification category called?")
+        while(selected.certificationClass === "New" || selected.certificationClass === ""){
+            console.log(selected.certificationClass.length)
+            selected.certificationClass = prompt("What is your new  certification category called?")
         }
         while(selected.name === ""){
             selected.name = prompt("What is the name of your new certification?")
