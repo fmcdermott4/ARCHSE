@@ -12,8 +12,10 @@ type Profile {
 }
 type individualCertification {
     certification: Certification
-        acquired: String
-        valid: Boolean
+    acquired: String
+    required: Boolean
+    valid: Boolean
+    certifier: Profile
 }
 type Access {
     level: String
@@ -95,7 +97,7 @@ type Mutation {
     submitAudit(profile: ID!, category: ID!, timeSubmitted: String!, answers: [AnswerInput], facility: ID!): Audit
     updateCertification(id: ID, name: String, validity: String, additionalData: String): Certification
     createCertification(name: String, validity: String, additionalData: String, certificationClass: String): Certification
-    deleteCertification(id:ID): Certification
+    deleteCertification( id:ID): Certification
 }`;
 
 module.exports = typeDefs;

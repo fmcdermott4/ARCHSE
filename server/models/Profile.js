@@ -38,6 +38,10 @@ const profileSchema = new Schema({
       acquired: {
         type: String
       },
+      required:{
+        type: Boolean,
+        default: false
+      },
       valid: {
         type: Boolean,
         default: false
