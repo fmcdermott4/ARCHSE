@@ -63,15 +63,20 @@ const AvailableTrainings = (selected) => {
         return(
         <Container>
             <Row key="header">
-                <Col xs={3}>
-                    <h4>Name</h4>
+                <Col xs={11}>
+                    <Row>
+                        <Col xs={6} md={3}>
+                            <h4>Name</h4>
+                        </Col>
+                        <Col xs={6} md={2}>
+                            <h4>Validity</h4>
+                        </Col>
+                        <Col xs="auto" md={7}>
+                            <h4>Description</h4>
+                        </Col>
+                    </Row>
                 </Col>
-                <Col xs={3}>
-                    <h4>Validity</h4>
-                </Col>
-                <Col xs={6}>
-                    <h4>Description</h4>
-                </Col>
+                <Col xs={1} />
             </Row>
             <hr/>
             {certificationArrayMap(certificationArray)}

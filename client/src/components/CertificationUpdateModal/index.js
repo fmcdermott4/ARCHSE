@@ -8,6 +8,7 @@ import Container from 'react-bootstrap/Container';
 import {UPDATE_CERTIFICATION} from '../../utils/mutations';
 import {useMutation} from '@apollo/client';
 import { useHistory} from 'react-router-dom';
+import CertificationDeleteModal from '../CertificationDeleteModal';
 
 
 function MyVerticallyCenteredModal(props) {
@@ -56,7 +57,7 @@ function MyVerticallyCenteredModal(props) {
       >
         <Container>
         <Form key={props.details._id}>
-          <Form.Label>Name</Form.Label>
+          <Form.Label >Name</Form.Label>
           <Form.Control type="text" name="name" defaultValue={props.details.name} onChange={handleChange}/>
           <Form.Label>Validity (days)</Form.Label>
           <Form.Control type="test" name="validity" defaultValue={props.details.validity} onChange={handleChange}/>
@@ -75,27 +76,39 @@ function MyVerticallyCenteredModal(props) {
   
   function CertificationModal(certification) {
     const [modalShow, setModalShow] = React.useState(false);
+    const [deleteModalShow, setDeleteModalShow] = React.useState(false);
   
     return(
       <div>
-        <a key={certification.certification._id} data-toggle="modal" href="#" onClick={() => setModalShow(true)}>
-            <Row >
-                <Col xs={3}>
-                    <p>{certification.certification.name}</p>
-                </Col>
-                <Col xs={3}>
-                    <p>{certification.certification.validity} days</p>
-                </Col>
-                <Col xs={6}>
-                    <p>{certification.certification.additionalData}</p>
-                </Col>
-            </Row>
+          <Row >
+            <Col xs={11}>
+              <a key={certification.certification._id} data-toggle="modal" href="#" onClick={() => setModalShow(true)}>
+                <Row>
+                  <Col xs={6} md={3}>
+                      <p>{certification.certification.name}</p>
+                  </Col>
+                  <Col xs={6} md={2}>
+                      <p>{certification.certification.validity} days</p>
+                  </Col>
+                  <Col xs="auto" md={7}>
+                      <p>{certification.certification.additionalData}</p>
+                  </Col>
+                  </Row>
+              </a>
+            </Col>  
+            <Col xs={1}>
+              <Button variant="secondary" onClick={() => deleteModalShow(true)}>Delete</Button>
+            </Col>
+          </Row>            
             <MyVerticallyCenteredModal 
             show={modalShow} details={certification.certification}
             onHide={() => setModalShow(false)}
-          />
+            />
             <hr/>
-        </a>
+        
+        {/* <CertificationDeleteModal 
+            show={deleteModalShow} details={certification.certification._id} 
+            onHide={() => setDeleteModalShow(false)}/> */}
       </div>
   )
     // return (
