@@ -52,3 +52,11 @@ export const CREATE_CERTIFICATION = gql`
     }
   }
 `;
+
+export const DELETE_CERTIFICATION_BY_ID = gql`
+  mutation deleteCertification($id : ID){
+    deleteCertification(id:$id){
+      _id
+    }
+  }
+`;

@@ -91,24 +91,23 @@ function MyVerticallyCenteredModal(props) {
                       <p>{certification.certification.validity} days</p>
                   </Col>
                   <Col xs="auto" md={7}>
-                      <p>{certification.certification.additionalData}</p>
+                      <p style={{'overFlowWrap' : 'break-word'}}>{certification.certification.additionalData}</p>
                   </Col>
                   </Row>
               </a>
             </Col>  
             <Col xs={1}>
-              <Button variant="secondary" onClick={() => deleteModalShow(true)}>Delete</Button>
+              <Button variant="secondary" onClick={() => setDeleteModalShow(true)}>Delete</Button>
             </Col>
           </Row>            
             <MyVerticallyCenteredModal 
             show={modalShow} details={certification.certification}
             onHide={() => setModalShow(false)}
-            />
+            />       
+          <CertificationDeleteModal 
+            show={deleteModalShow} details={certification.certification} 
+            onHide={() => setDeleteModalShow(false)}/>
             <hr/>
-        
-        {/* <CertificationDeleteModal 
-            show={deleteModalShow} details={certification.certification._id} 
-            onHide={() => setDeleteModalShow(false)}/> */}
       </div>
   )
     // return (

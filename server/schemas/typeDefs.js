@@ -95,6 +95,7 @@ type Mutation {
     submitAudit(profile: ID!, category: ID!, timeSubmitted: String!, answers: [AnswerInput], facility: ID!): Audit
     updateCertification(id: ID, name: String, validity: String, additionalData: String): Certification
     createCertification(name: String, validity: String, additionalData: String, certificationClass: String): Certification
+    deleteCertification(id:ID): Certification
 }`;
 
 module.exports = typeDefs;

@@ -94,6 +94,10 @@ const resolvers = {
     createCertification: async (parent,{name, validity, additionalData, certificationClass}) =>{
       const createCert = await Certification.create({name, validity, additionalData, certificationClass});
       return(createCert);
+    },
+    deleteCertification: async (parent, {id}) => {
+      const deleteCert = await Certification.findByIdAndDelete({_id: id});
+      return(deleteCert)
     }
   }
 };
