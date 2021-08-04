@@ -49,8 +49,7 @@ const profileSchema = new Schema({
       certifier:{
         type: Schema.Types.ObjectId,
         ref:"Profile"
-      }
-      
+      }      
     },
   ],
   audits: [
