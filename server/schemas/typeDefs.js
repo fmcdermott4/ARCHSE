@@ -7,6 +7,7 @@ type Profile {
     email: String
     password: String
     access: Access
+    active: Boolean
     certifications:[individualCertification]
     audits: [Audit]
 }

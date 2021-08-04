@@ -17,7 +17,7 @@ const IndividualAudit = () => {
         }
 
         var today = new Date();
-        var date = today.getFullYear()+'-'+right(("0"+(today.getMonth()+1)), 2)+'-'+today.getDate();
+        var date = today.getFullYear()+'-'+right(("0"+(today.getMonth()+1)), 2)+'-'+ right(("0" +today.getDate()), 2);
         return(date)
     }
     const { categoryId } = useParams();

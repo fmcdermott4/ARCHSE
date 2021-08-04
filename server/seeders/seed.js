@@ -1,6 +1,6 @@
 const db = require('../config/connection');
 const { Profile, Category, Audit, Facility, AuditType, UserStatus, Certification} = require('../models');
-const questionSeeds = require('./questionSeeds.json');
+const questionSeeds = require('./productionQuestionSeeds.json');
 const profileSeeds = require('./profileSeeds.json');
 const auditSeeds = require('./auditSeeds.json');
 const facilitySeeds = require('./facilitySeeds.json');
@@ -11,7 +11,7 @@ const certificationSeeds = require('./certificationsSeeds.json');
 db.once('open', async () =>{
     try{
         // await Category.deleteMany({});
-        // await Category.create(questionSeeds);
+        await Category.create(questionSeeds);
         // await Profile.deleteMany({});
         // await Profile.create(profileSeeds);
         // await Audit.deleteMany({});
@@ -22,8 +22,8 @@ db.once('open', async () =>{
         // await AuditType.create(auditTypeSeeds);
         // await UserStatus.deleteMany({});
         // await UserStatus.create(userStatusSeeds);
-        await Certification.deleteMany({});
-        await Certification.create(certificationSeeds);
+        // await Certification.deleteMany({});
+        // await Certification.create(certificationSeeds);
 
         console.log("Successfully seeded!");
         process.exit(0);
