@@ -75,7 +75,7 @@ const CertificationsCreate = () => {
             })
             .then(alert("Successfully submitted")).then(history.go(0))
         } catch {
-            console.log("error")
+            console.log(error)
         }
         
         
