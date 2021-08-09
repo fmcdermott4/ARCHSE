@@ -63,18 +63,21 @@ type AuditType {
     _id: ID
     auditType: String
 }
-
 type Auth {
     token: ID!
     profile: Profile
 }
-
+type ReportingStructure {
+    _id: ID
+    profileId: ID
+    manager: ID
+    reports: [ID]
+}
 input AnswerInput {
     _id: ID
     question: String
     answer: String
 }
-
 type Query {
     categories:[Category]
     category(categoryId: ID!): Category
@@ -90,6 +93,9 @@ type Query {
     certifications:[Certification]
     certificationByClass(certificationClass: String!): [Certification]
     certification(certificationId: ID!): Certification
+    reportingStructures:[ReportingStructure]
+    reportingStructure(profileId: ID): ReportingStructure
+    
 }
 type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth

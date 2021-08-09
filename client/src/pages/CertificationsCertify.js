@@ -55,12 +55,22 @@ const CertificationsCertify = () => {
 
 const UserCertificationTable = (profile) =>{
     const{loading, data} = useQuery(QUERY_CERTIFICATIONS);
-    
-        // console.log(profile.data.name)
+    const tHead =(<thead>
+        <tr>
+            <th>{profile.data.name}</th>
+            <th>Class</th>
+            <th>Certification</th>
+            <th>Required</th>
+            <th>Expiration Date</th>
+            <th>Certified By</th>
+            <th>Recertify</th>
+        </tr>
+    </thead>)
+        console.log(profile.data.name)
         if(loading){
             return<div>loading...</div>
         }
-        return<div>{console.log(data)}User</div>
+        return<div><Table responsive="md">{tHead}</Table>{console.log(data)}</div>
 };
 
 export default CertificationsCertify;

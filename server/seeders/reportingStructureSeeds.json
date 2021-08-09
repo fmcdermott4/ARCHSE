@@ -1,0 +1,21 @@
+[
+    {
+        "profileId":"610ad34b8145e1274c670a10",
+        "reports":[  
+            "610acc878145e1274c6709e6",
+            "61112bbb77cda115982fc24e"
+        ]
+    },
+    {
+        "profileId":"610acc878145e1274c6709e6",
+        "manager":"610ad34b8145e1274c670a10",
+        "reports":[
+        ]
+    },
+    {
+        "profileId":"61112bbb77cda115982fc24e",
+        "manager":"610ad34b8145e1274c670a10",
+        "reports":[
+        ]
+    }
+]

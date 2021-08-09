@@ -309,3 +309,23 @@ export const QUERY_CERTIFICATION = gql`
     }
   }
 `;
+export const QUERY_REPORTING_STRUCTURES = gql`
+  query reportingStructures{
+    reportingStructures{
+      _id
+      profileId
+      manager
+      reports
+    }
+  }
+`;
+export const QUERY_REPORTING_STRUCTURE = gql`
+  query reportingStructure($profileId: ID){
+    reportingStructure(profileId:$profileId){
+      _id
+      profileId
+      manager
+      reports
+    }
+  }
+`;
