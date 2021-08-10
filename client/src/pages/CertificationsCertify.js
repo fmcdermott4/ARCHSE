@@ -3,8 +3,9 @@ import {QUERY_SINGLE_PROFILE, QUERY_CERTIFICATIONS, QUERY_REPORTING_STRUCTURE} f
 import {useQuery} from '@apollo/client'
 import Table from 'react-bootstrap/Table';
 import Auth from '../utils/auth';
-
-
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import ToggleButton from 'react-bootstrap/ToggleButton';
 
 const CertificationsCertify = () => {
     const{loading, data} = useQuery(QUERY_CERTIFICATIONS);
@@ -29,6 +30,7 @@ const CertificationsCertify = () => {
                 }               
             }
         }
+       return(data) 
     }
 
 
@@ -68,8 +70,7 @@ const CertificationsCertify = () => {
 };
 
 const UserCertificationTables = (certs) =>{
-    const certifications = certs.data;
-    // console.log(certifications)
+    const certifications = certs;
     const user = Auth.getProfile().data._id;
     const {loading, data} = useQuery(
         QUERY_REPORTING_STRUCTURE,
@@ -99,13 +100,57 @@ const UserCertificationTables = (certs) =>{
     //     console.log(profile.data)
     //     return<div><Table responsive="">{tHead}</Table></div>
     return(        
-        <div></div>
-        // <IndividualTable profileId={data.reportingStructure.profileId} certs={certifications}></IndividualTable>
+        
+        <IndividualTable profileId={data.reportingStructure.profileId} certs={certifications}></IndividualTable>
     )
 };
 
 const IndividualTable = (userInformation) =>{
-    const certifications = userInformation.certs;
+
+
+
+    const certificationMap = (certifications,profile) => {        
+        console.log(certifications)
+        console.log(profile)
+        const rows = certifications.map((certification)=>{
+            return(
+                <tr key={certification._id}>
+                    <th>{certification.certificationClass}</th>
+                    <th>{certification.name}</th>
+                    <th>
+                    <ButtonGroup>
+                        {["yes", "no"].map((radio, idx) => (
+                        <ToggleButton
+                            variant="outline-primary"
+                            name="radio"
+                            type="radio"
+                            key={idx}
+                            id={`radio-${idx}`}
+                            value={radio.value}
+                            // checked={}
+                            // onChange={}
+                        >
+                            
+                        </ToggleButton>
+                        ))}
+                    </ButtonGroup>
+                    </th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>
+                    <Button variant="primary">Primary</Button>
+                    </th>                    
+                </tr>
+            )
+        })
+        return(rows)
+    };
+    
+    
+    
+    
+    
+    const certifications = userInformation.certs.data;
     const {loading, data} = useQuery(
         QUERY_SINGLE_PROFILE,
         {
@@ -118,8 +163,6 @@ const IndividualTable = (userInformation) =>{
     return(        
         
         <Table responsiveness="sm">
-            {console.log(certifications)}
-            {console.log(data)}
             <thead>
                 <tr>
                     <th>{data.profile.name}</th>
@@ -133,6 +176,9 @@ const IndividualTable = (userInformation) =>{
                     <th>Recertify</th>
                 </tr>
             </thead>
+            <tbody>
+                {certificationMap(certifications, data.profile)}
+            </tbody>
         </Table>        
     )
 }
