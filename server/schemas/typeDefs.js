@@ -1,6 +1,13 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
+type File {
+    _id: ID!
+    path: String!
+    filename: String!
+    mimetype: String!
+    encoding: String!
+}
 type Profile {
     _id: ID
     name: String
@@ -105,6 +112,7 @@ type Mutation {
     updateCertification(id: ID, name: String, validity: String, additionalData: String): Certification
     createCertification(name: String, validity: String, additionalData: String, certificationClass: String): Certification
     deleteCertification( id:ID): Certification
+    uploadFile(file: Upload!): File
 }`;
 
 module.exports = typeDefs;

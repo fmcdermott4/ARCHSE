@@ -27,6 +27,7 @@ import GradingStandards from './pages/GradingStandards';
 import Standards from './pages/Standards';
 import Procedures from './pages/Procedures';
 import PageNotFound from './pages/PageNotFound'
+import UploadFile from './components/UploadFile';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -81,6 +82,9 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
+              <Route exact path="/upload">
+                <UploadFile />
+              </Route>              
               <Route exact path="/login">
                 <Login />
               </Route>

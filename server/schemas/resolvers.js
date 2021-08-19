@@ -1,4 +1,4 @@
-const { Category, Profile, Audit, Facility, AuditType, Certification, ReportingStructure} = require("../models");
+const { Category, Profile, Audit, Facility, AuditType, Certification, ReportingStructure, File} = require("../models");
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
@@ -104,6 +104,9 @@ const resolvers = {
     deleteCertification: async (parent, {id}) => {
       const deleteCert = await Certification.findByIdAndDelete({_id: id});
       return(deleteCert)
+    },
+    uploadFile: async (parent, {file}) =>{
+      const { stream, filename, mimetype, encoding } = await file;
     }
   }
 };
