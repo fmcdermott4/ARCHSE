@@ -1,8 +1,11 @@
 const { Category, Profile, Audit, Facility, AuditType, Certification, ReportingStructure, File} = require("../models");
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
+const { GraphQLUpload } = require('graphql-upload');
+const { finished } = require('stream/promises');
 
 const resolvers = {
+  Upload: GraphQLUpload,
   Query: {
     categories: async () => {
       return await Category.find({}).populate("questions");
@@ -56,7 +59,7 @@ const resolvers = {
     reportingStructure: async (parent, {profileId})=>{
       return await ReportingStructure.find({profileId: profileId})
     },
-  },
+  },  
   Mutation: {
     addProfile: async (parent, { name, email, password }) => {
       const profile = await Profile.create({ name, email, password });
@@ -105,9 +108,21 @@ const resolvers = {
       const deleteCert = await Certification.findByIdAndDelete({_id: id});
       return(deleteCert)
     },
-    uploadFile: async (parent, {file}) =>{
-      const { stream, filename, mimetype, encoding } = await file;
-    }
+    singleUpload: async (parent, { file }) => {
+      const { createReadStream, filename, mimetype, encoding } = await file;
+
+      // Invoking the `createReadStream` will return a Readable Stream.
+      // See https://nodejs.org/api/stream.html#stream_readable_streams
+      const stream = createReadStream();
+
+      // This is purely for demonstration purposes and will overwrite the
+      // local-file-output.txt in the current working directory on EACH upload.
+      const out = require('fs').createWriteStream('local-file-output.txt');
+      stream.pipe(out);
+      await finished(out);
+
+      return { filename, mimetype, encoding };
+    }  
   }
 };
 

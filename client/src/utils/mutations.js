@@ -60,3 +60,11 @@ export const DELETE_CERTIFICATION_BY_ID = gql`
     }
   }
 `;
+
+export const UPLOAD_SINGLE_FILE = gql`
+mutation singleUpload($file: Upload){
+  singleUpload(file: $file){
+    _id
+  }
+}
+`;

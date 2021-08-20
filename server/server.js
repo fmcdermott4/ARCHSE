@@ -1,6 +1,10 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
+const {
+  GraphQLUpload,
+  graphqlUploadExpress,
+} = require('graphql-upload');
 require('dotenv').config();
 
 const { typeDefs, resolvers } = require('./schemas');
@@ -17,11 +21,11 @@ const server = new ApolloServer({
   // Add context to our server so data from the `authMiddleware()` function can pass data to our resolver functions
   context: authMiddleware,
 });
-
-server.applyMiddleware({ app });
-
+app.use(graphqlUploadExpress())
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+server.applyMiddleware({ app });
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
