@@ -110,7 +110,7 @@ type Mutation {
     updateCertification(id: ID, name: String, validity: String, additionalData: String): Certification
     createCertification(name: String, validity: String, additionalData: String, certificationClass: String): Certification
     deleteCertification( id:ID): Certification
-    singleUpload(file: Upload!): File!
+    singleUpload(file: Upload): File
 }`;
 
 module.exports = typeDefs;

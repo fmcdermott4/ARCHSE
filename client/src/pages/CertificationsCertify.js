@@ -110,8 +110,6 @@ const IndividualTable = (userInformation) =>{
 
 
     const certificationMap = (certifications,profile) => {        
-        console.log(certifications)
-        console.log(profile)
         const rows = certifications.map((certification)=>{
             return(
                 <tr key={certification._id}>

@@ -30,7 +30,7 @@ const CertificationsCreate = () => {
             ...selected,
             [name] : value
         })
-        console.log(selected)
+        
     }
     const myCategories = (data) =>{
         let array = [];
@@ -59,14 +59,12 @@ const CertificationsCreate = () => {
         event.preventDefault();
         selected.validity=parseInt(selected.validity).toString();
         while(selected.certificationClass === "New" || selected.certificationClass === ""){
-            console.log(selected.certificationClass.length)
             selected.certificationClass = prompt("What is your new  certification category called?")
         }
         while(selected.name === ""){
             selected.name = prompt("What is the name of your new certification?")
         }
         while(isNaN(selected.validity) || selected.validity === "" || selected.validity < 1){
-            console.log(selected.validity)
             selected.validity = prompt("What is your certification validity in days?")
         }
         try{

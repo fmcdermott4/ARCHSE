@@ -2,7 +2,6 @@ const { Category, Profile, Audit, Facility, AuditType, Certification, ReportingS
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 const { GraphQLUpload } = require('graphql-upload');
-const { finished } = require('stream/promises');
 
 const resolvers = {
   Upload: GraphQLUpload,
@@ -109,19 +108,49 @@ const resolvers = {
       return(deleteCert)
     },
     singleUpload: async (parent, { file }) => {
-      const { createReadStream, filename, mimetype, encoding } = await file;
+      console.log(file)
+      const { filename, mimetype, encoding } = await file;
 
       // Invoking the `createReadStream` will return a Readable Stream.
       // See https://nodejs.org/api/stream.html#stream_readable_streams
-      const stream = createReadStream();
+      // const stream = createReadStream();
 
       // This is purely for demonstration purposes and will overwrite the
       // local-file-output.txt in the current working directory on EACH upload.
-      const out = require('fs').createWriteStream('local-file-output.txt');
-      stream.pipe(out);
-      await finished(out);
+      // const out = require('fs').createWriteStream('local-file-output.txt');
+      // stream.pipe(out);
+      // await finished(out);
 
       return { filename, mimetype, encoding };
+
+
+
+
+
+
+      // const Grid = require('gridfs-stream');
+      // const fs = require('fs');
+      // const conn = require('../config/connection');
+      // const mongoose = require('mongoose');
+      
+      // Grid.mongo = mongoose.mongo;
+    
+      // conn.once('open', (file) =>{
+      //   console.log("gridfs connetion open");
+      //   console.log(file);
+      //   const gfs = Grid(conn.db);
+      //   const writeStream = gfs.createWriteStream({
+         
+      //     filename: 'myVideo-db.mp4'
+      //   });
+      //   fs.createReadStream(file).pipe(writeStream)
+      //   writeStream.on('close', (upload) => {
+      //     // Do something with 'file'
+      //     // Console logging that it was written succesfully
+      //     console.log(`${upload.filename} was written to DB`);
+      //   return(upload)
+      //   });      
+      // })          
     }  
   }
 };

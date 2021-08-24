@@ -52,6 +52,7 @@ query profiles{
       }      
     }
     audits{
+      _id
       category{
         _id
         category
@@ -98,6 +99,7 @@ export const QUERY_SINGLE_PROFILE = gql`
         }      
       }
       audits{
+        _id
         category{
           _id
           category

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -83,7 +83,7 @@ const Profile = () => {
                   <p>{audit.category.category}</p>
                 </Col>
                 <Col>
-                  <p>{auditResult(audit)}</p>
+                  <Link to={"/auditresults/"+audit._id}>{auditResult(audit)}</Link>
                 </Col>
                 <hr/>
               </Row>

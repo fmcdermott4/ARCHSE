@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import {UPLOAD_SINGLE_FILE} from '../../utils/mutations';
 import Dropzone, {useDropzone} from "react-dropzone"
+import Button from 'react-bootstrap/Button';
 
 const baseStyle = {
     flex: 1,
@@ -53,7 +54,9 @@ const UploadFile = (props) =>{
         isDragReject,
         isDragAccept
       ]);
-  
+    
+    
+
     const files = (upload) =>{
         if(upload){
             return(
@@ -69,16 +72,31 @@ const UploadFile = (props) =>{
     } 
     
 
-    const [upload, setUpload] = useState(null); 
+    const [upload, setUpload] = useState(null);
+    
+    const [singleUpload, {error}] = useMutation(UPLOAD_SINGLE_FILE);
+
+    const handleSubmitUpload = async (e) =>{
+        e.preventDefault();
+        if(upload){
+            // console.log({file: upload})
+            await singleUpload({
+            variables: {file: upload}
+            }
+            )
+        } else {
+            console.log("Nothing to upload")
+        }
+    }
 
     return (
         <div className="container">
-            <Dropzone onDrop={acceptedFiles => {console.log(acceptedFiles); setUpload(acceptedFiles)}}>
+            <Dropzone onDrop={acceptedFile => {console.log(acceptedFile); setUpload(acceptedFile)}}>
                 {({getRootProps, getInputProps}) => (
                     <section>
                     <div {...getRootProps({style})}>
                         <input {...getInputProps()} />
-                        <p>Drag 'n' drop some files here, or click to select files</p>
+                        <p>Drag 'n' drop a file here, or click to select file</p>
                     </div>
                     </section>
                 
@@ -89,6 +107,9 @@ const UploadFile = (props) =>{
                 <h4>Files</h4>
                 <ul>{files(upload)}</ul>
             </aside>
+            <Button className="btn btn-primary" onClick={(e) =>handleSubmitUpload(e)}>
+                Submit
+            </Button>
       </div>
     );
 
