@@ -20,13 +20,24 @@ const AuditResults = () => {
     
     
     const auditMap = (audit) =>{
-        console.log(audit)
-        console.log(audit.category.questions)
+        let rows = (<Row>
+            <Col>
+                <h5>Question</h5>
+            </Col>                    
+            <Col>
+            <h5>Answer</h5>
+            </Col>
+        </Row>)
+
+        for(let i = 0; i<audit.category.questions.length; i++){
+            rows = (<div>{rows}<Row><Col>{audit.category.questions[i].question}</Col><Col>{audit.answers[i].answer}</Col></Row><hr/></div>)
+        }
         
         
-        return(<div></div>);
-        
-    }
+        return(
+            rows
+        );       
+    };
     
 
 
@@ -35,17 +46,10 @@ const AuditResults = () => {
     }    
     return(
         <div>
-            
+            <br/>
             <h3>{data.audit.facility.facility}: {data.audit.category.category}</h3>
             <br/>
-            <Row>
-                <Col>
-                    <h5>Question</h5>
-                </Col>                    
-                <Col>
-                <h5>Answer</h5>
-                </Col>
-            </Row>
+            
             {auditMap(data.audit)}
             
         </div>
