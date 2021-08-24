@@ -58,8 +58,8 @@ const resolvers = {
     reportingStructure: async (parent, {profileId})=>{
       return await ReportingStructure.find({profileId: profileId})
     },
-    auditsByCategory: async (parent, {categoryId})=>{
-      return await Audit.find({'category._id': categoryId}).populate('category facility')
+    auditsByCategory: async (parent, {category})=>{
+      return await Audit.find({category: category}).populate('profile category facility ')
     },
   },  
   Mutation: {

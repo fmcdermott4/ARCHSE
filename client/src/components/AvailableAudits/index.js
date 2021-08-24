@@ -26,7 +26,7 @@ const AvailableAudits = ({categories, title}) => {
                     </Link>
                   </Col>
                   <Col>
-                    <Link className="btn btn-block btn-squared btn-light text-dark" to={"/"}>
+                    <Link className="btn btn-block btn-squared btn-light text-dark" to={`/audits/auditresults/${category._id}`}>
                         View Audits
                     </Link>
                   </Col> 

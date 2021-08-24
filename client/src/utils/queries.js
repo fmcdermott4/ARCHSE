@@ -331,3 +331,36 @@ export const QUERY_REPORTING_STRUCTURE = gql`
     }
   }
 `;
+export const QUERY_AUDITS_BY_CATEGORY = gql`
+  query auditsByCategory($categoryId:ID){
+    auditsByCategory(category: $categoryId){
+      _id
+      profile{
+        _id
+        name     
+      }
+      category{
+        _id
+        category
+        auditType
+        questions{
+          _id
+          section
+          question
+          correctAnswer
+        }
+      }
+      timeSubmitted
+      answers{
+        _id
+        question
+        answer
+      }
+      facility{
+        _id
+        facility
+      }
+      
+    }
+  }
+`;

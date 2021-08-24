@@ -29,6 +29,7 @@ import Procedures from './pages/Procedures';
 import PageNotFound from './pages/PageNotFound'
 import UploadFile from './components/UploadFile';
 import AuditResults from './pages/AuditResult';
+import AuditResultsByCategory from './pages/AuditResultsByCategory';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -106,6 +107,9 @@ function App() {
               </Route>
               <Route exact path="/procedures">
                 <Procedures />
+              </Route>
+              <Route exact path='/audits/auditresults/:categoryId'>
+                <AuditResultsByCategory />
               </Route>
               <Route exact path="/certifications/certify">
                 <CertificationsCertify />
