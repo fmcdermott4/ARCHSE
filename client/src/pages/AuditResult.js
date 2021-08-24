@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col';
 
 const AuditResults = () => {
     const auditId = useParams().auditId;
-    const { loading, data } = useQuery(
+    const { loading, error, data } = useQuery(
         QUERY_AUDIT,
         {
             variables: {"id": auditId },
@@ -43,6 +43,9 @@ const AuditResults = () => {
 
     if(loading){
         return<p>Loading...</p>
+    }
+    if(error){
+        return<p>Not a valid audit</p>
     }    
     return(
         <div>

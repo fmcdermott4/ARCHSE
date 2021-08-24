@@ -100,6 +100,7 @@ type Query {
     certification(certificationId: ID!): Certification
     reportingStructures:[ReportingStructure]
     reportingStructure(profileId: ID): ReportingStructure
+    auditsByCategory(category: ID):[Audit]
     
 }
 type Mutation {
