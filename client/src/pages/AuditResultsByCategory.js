@@ -54,13 +54,13 @@ const AuditResultsByCategory = () =>{
     <div>
         <Row>
             <Col>
-              <h4>Audit Location</h4>
+                <h4>Audit Location</h4>
             </Col>
             <Col>
-              <h4>Date Conducted</h4>
+                <h4>Date Conducted</h4>
             </Col>
             <Col>
-              <h4>Auditer</h4>
+                <h4>Auditor</h4>
             </Col>
             <Col>
               <h4>Audit Result</h4>

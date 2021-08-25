@@ -16,7 +16,6 @@ const categorySchema = new Schema({
             {
             section: {
                 type: String,
-                required: true,
                 trim:true,
             },
             question: {
