@@ -25,12 +25,16 @@ const AuditResults = () => {
                 <h5>Question</h5>
             </Col>                    
             <Col>
-            <h5>Answer</h5>
+                <h5>Answer</h5>
+            </Col>
+            <Col>
+                <h5>Requirement</h5>
             </Col>
         </Row>)
 
         for(let i = 0; i<audit.category.questions.length; i++){
-            rows = (<div>{rows}<Row><Col>{audit.category.questions[i].question}</Col><Col>{audit.answers[i].answer}</Col></Row><hr/></div>)
+            console.log(audit)
+            rows = (<div>{rows}<Row><Col>{audit.category.questions[i].question}</Col><Col>{audit.answers[i].answer}</Col><Col>{audit.category.questions[i].section}</Col></Row><hr/></div>)
         }
         
         

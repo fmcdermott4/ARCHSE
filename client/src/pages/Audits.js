@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useQuery } from '@apollo/client';
 import AvailableAudits from '../components/AvailableAudits';
 import { QUERY_AUDIT_TYPES, QUERY_CATEGORY_BY_AUDIT_TYPE } from '../utils/queries';
@@ -7,7 +7,6 @@ import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-const { useState } = React;
 
 const Audits = () => {
 

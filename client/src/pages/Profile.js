@@ -24,7 +24,7 @@ const Profile = () => {
     let nA = 0;
     for(let z = 0; z < questionNum; z++){
       let answer = audit.answers[z].answer;
-      if(answer === "n/a"){
+      if(answer === "n/a" || answer === "N/A"){
         nA++;
       }
     }  
@@ -83,7 +83,7 @@ const Profile = () => {
                   <p>{audit.category.category}</p>
                 </Col>
                 <Col>
-                  <Link to={"/auditresults/"+audit._id}>{auditResult(audit)}</Link>
+                  <Link to={"/audits/auditresults/"+audit._id}>{auditResult(audit)}</Link>
                 </Col>
                 <hr/>
               </Row>

@@ -1,28 +1,24 @@
-import react from 'react';
-import {useParams, Link} from 'react-router-dom';
+import React from 'react';
+import {Link} from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import {QUERY_AUDITS_BY_CATEGORY} from '../utils/queries'
+import {QUERY_AUDITS, QUERY_FACILITIES} from '../utils/queries'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form'
 import Container from 'react-bootstrap/Container';
 
-const AuditResultsByCategory = () =>{
-    const auditCategory = useParams().categoryId;
-    const { loading, error, data } = useQuery(
-        QUERY_AUDITS_BY_CATEGORY,
-        {
-            variables: {"categoryId": auditCategory },
-        }
-    );
+const AuditResultsAll = () =>{
+    const { loading, error, data } = useQuery(QUERY_AUDITS);
+    
     
     const auditResult = (audit) => {
-        console.log(audit);
+        
         const questionNum = audit.category.questions.length;
         let correctAns = 0;
         let nA = 0;
         for(let z = 0; z < questionNum; z++){
             let answer = audit.answers[z].answer;
-            if(answer === "n/a"){
+            if(answer === "n/a"|| answer === 'N/A'){
             nA++;
             }
         }  
@@ -60,14 +56,23 @@ const AuditResultsByCategory = () =>{
                 <h4>Date Conducted</h4>
             </Col>
             <Col>
-                <h4>Auditor</h4>
+                <h4>Audit Category</h4>
             </Col>
             <Col>
-              <h4>Audit Result</h4>
+               <h4>Audit Result</h4>
             </Col>
-            <hr/>
-          </Row>
-        {data.auditsByCategory.map((audit)=>{
+            
+        </Row>
+        <Row>
+            <Col>
+        <Facilities />
+            </Col>
+            <Col />
+            <Col />
+            <Col />
+        </Row>
+        <hr/>
+        {data.audits.map((audit)=>{
             return(
                 <Row key={audit._id}>
                 <Col>
@@ -77,7 +82,7 @@ const AuditResultsByCategory = () =>{
                     <p>{audit.timeSubmitted}</p>
                 </Col>
                 <Col>
-                    <p>{audit.profile.name}</p>
+                    <p>{audit.category.category}</p>
                 </Col>
                 <Col>
                     <Link to={"/audits/auditresults/"+audit._id}>{auditResult(audit)}</Link>
@@ -92,4 +97,36 @@ const AuditResultsByCategory = () =>{
 
 }
 
-export default AuditResultsByCategory;
+const Facilities = () =>{
+    const {loading, error, data} = useQuery(QUERY_FACILITIES);
+    
+    const facilitiesButton = (facilities) =>{        
+        return(
+            <Form>
+                <Form.Control as="select" >
+                    {facilities.map((facility)=>{                    
+                        return(
+                            <option key={facility.facility} value={facility._id}>
+                                {facility.facility}
+                            </option>)
+                        })
+                    }
+                </Form.Control>
+            </Form>
+        )
+    }
+
+    if(loading){
+        return(<div>Loading...</div>)
+    }
+    if(error){
+        return(<div>Error...</div>)
+    }
+    return(
+        <div>
+            {facilitiesButton(data.facilities)}
+        </div>
+    )
+}
+
+export default AuditResultsAll;

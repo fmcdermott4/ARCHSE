@@ -1,1 +1,209 @@
-{"category":"Production Line", "auditType":"Production","questions": [{"section" : "n/a", "question" : "What item is being produced on this line?", "correctAnswer" : "ANY", "answers": ["BLENDER","BLOWER","BREADMAKER","CAN OPENER","COMPACT FREEZER","COMPACT REFRIDGERATOR","COUNTERTOP GRILL","COUNTERTOP ICEMAKER","DEHUMIDIFIER","DESKTOP-WALL MOUNT FAN","DRIP COFFEE MAKER","ELECTRIC KNIFE","FOOD PROCESSOR","GRIDDLE","HAND MIXER","HEATER","IRON","JOBSITE SAW","JUICER","MICROWAVE","PORTABLE AIR CONDITIONER","RICE COOKER","SLOT TOASTER","SLOW COOKER","SOUNDBAR","STRING TRIMMER","TOASTER OVEN","WAFFLE IRON","WINDOW AIR CONDITIONER"]},{"section" : "n/a", "question" : "Do approved work instructions exist for the item being produced?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Is line clean?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Is line free of obstructions that  would limit movement or people or products?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Is line staffing no more than work instruction allocation?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "If PPE is required, is PPE present?", "correctAnswer" : "Yes", "answers": ["n/a", "Yes", "No"]},{"section" : "n/a", "question" : "If PPE is present, is it in good working condition?", "correctAnswer" : "Yes", "answers": ["n/a", "Yes", "No"]},{"section" : "n/a", "question" : "Are all required supplies present?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Is all required special equipment or material present?", "correctAnswer" : "Yes", "answers": ["n/a", "Yes", "No"]},{"section" : "n/a", "question" : "Are all required gaylords present and being used for their assigned waste?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Is there clearly defined and utilized WIP storage areas between resource centers?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Ia there a clearly defined and utilized item quarantine area?", "correctAnswer" : "Yes", "answers": ["n/a", "Yes", "No"]},{"section" : "n/a", "question" : "Are quarantined item's issues clearly displayed?", "correctAnswer" : "Yes", "answers": ["n/a", "Yes", "No"]},{"section" : "n/a", "question" : "Is breakdown performing all required tasks in work instruction approved sequence?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Is testing performing all required tasks in work instruction approved sequence?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Is cleaning performing all required tasks in work instruction approved sequence?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Is packing performing all required tasks in work instruction approved sequence?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Does QC have approved quality standard available for item being produced?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]},{"section" : "n/a", "question" : "Is QC performing all required tasks in work instruction approved sequence?", "correctAnswer" : "Yes", "answers": ["Yes", "No"]}]}
+{
+    "category": "Production Line",
+    "auditType": "Production",
+    "questions": [
+        {
+            "section": "n/a",
+            "question": "What item is being produced on this line?",
+            "correctAnswer": "ANY",
+            "answers": [
+                "BLENDER",
+                "BLOWER",
+                "BREADMAKER",
+                "CAN OPENER",
+                "COMPACT FREEZER",
+                "COMPACT REFRIDGERATOR",
+                "COUNTERTOP GRILL",
+                "COUNTERTOP ICEMAKER",
+                "DEHUMIDIFIER",
+                "DESKTOP-WALL MOUNT FAN",
+                "DRIP COFFEE MAKER",
+                "ELECTRIC KNIFE",
+                "FOOD PROCESSOR",
+                "GRIDDLE",
+                "HAND MIXER",
+                "HEATER",
+                "IRON",
+                "JOBSITE SAW",
+                "JUICER",
+                "MICROWAVE",
+                "PORTABLE AIR CONDITIONER",
+                "RICE COOKER",
+                "SLOT TOASTER",
+                "SLOW COOKER",
+                "SOUNDBAR",
+                "STRING TRIMMER",
+                "TOASTER OVEN",
+                "WAFFLE IRON",
+                "WINDOW AIR CONDITIONER"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Do approved work instructions exist for the item being produced?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Is line clean?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Is line free of obstructions that  would limit movement or people or products?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Is line staffing no more than work instruction allocation?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "If PPE is required, is PPE present?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "n/a",
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "If PPE is present, is it in good working condition?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "n/a",
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Are all required supplies present?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Is all required special equipment or material present?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "n/a",
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Are all required gaylords present and being used for their assigned waste?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Is there clearly defined and utilized WIP storage areas between resource centers?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Ia there a clearly defined and utilized item quarantine area?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "n/a",
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Are quarantined item's issues clearly displayed?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "n/a",
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Is breakdown performing all required tasks in work instruction approved sequence?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Is testing performing all required tasks in work instruction approved sequence?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Is cleaning performing all required tasks in work instruction approved sequence?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Is packing performing all required tasks in work instruction approved sequence?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Does QC have approved quality standard available for item being produced?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "section": "n/a",
+            "question": "Is QC performing all required tasks in work instruction approved sequence?",
+            "correctAnswer": "Yes",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    ]
+}

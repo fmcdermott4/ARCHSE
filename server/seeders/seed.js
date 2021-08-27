@@ -8,11 +8,12 @@ const auditTypeSeeds = require('./auditTypeSeeds.json');
 const userStatusSeeds = require('./userStatusesSeeds.json');
 const certificationSeeds = require('./certificationsSeeds.json');
 const reportingStructureSeeds = require('./reportingStructureSeeds.json')
+const amazonQuestionSeeds = require('./amazonAuditSeed.json')
 
 db.once('open', async () =>{
     try{
         // await Category.deleteMany({});
-        // await Category.create(questionSeeds);
+        await Category.create(amazonQuestionSeeds);
         // await Profile.deleteMany({});
         // await Profile.create(profileSeeds);
         // await Audit.deleteMany({});
@@ -25,8 +26,8 @@ db.once('open', async () =>{
         // await UserStatus.create(userStatusSeeds);
         // await Certification.deleteMany({});
         // await Certification.create(certificationSeeds);
-        await ReportingStructure.deleteMany({});
-        await ReportingStructure.create(reportingStructureSeeds);
+        // await ReportingStructure.deleteMany({});
+        // await ReportingStructure.create(reportingStructureSeeds);
 
         console.log("Successfully seeded!");
         process.exit(0);

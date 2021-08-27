@@ -1,17 +1,17 @@
 import react from 'react';
 import {useParams, Link} from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import {QUERY_AUDITS_BY_CATEGORY} from '../utils/queries'
+import {QUERY_AUDITS_BY_FACILITY} from '../utils/queries'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
-const AuditResultsByCategory = () =>{
-    const auditCategory = useParams().categoryId;
+const AuditResultsByFacility = () =>{
+    const auditFacility = useParams().facilityId;
     const { loading, error, data } = useQuery(
-        QUERY_AUDITS_BY_CATEGORY,
+        QUERY_AUDITS_BY_FACILITY,
         {
-            variables: {"categoryId": auditCategory },
+            variables: {"facilityId": auditFacility },
         }
     );
     
@@ -67,7 +67,7 @@ const AuditResultsByCategory = () =>{
             </Col>
             <hr/>
           </Row>
-        {data.auditsByCategory.map((audit)=>{
+        {data.auditsByFacility.map((audit)=>{
             return(
                 <Row key={audit._id}>
                 <Col>
@@ -80,7 +80,7 @@ const AuditResultsByCategory = () =>{
                     <p>{audit.profile.name}</p>
                 </Col>
                 <Col>
-                    <Link to={"/audits/auditresults/"+audit._id}>{auditResult(audit)}</Link>
+                    <Link to={"/auditresults/"+audit._id}>{auditResult(audit)}</Link>
                 </Col>
                 <hr/>
                 </Row>
@@ -92,4 +92,4 @@ const AuditResultsByCategory = () =>{
 
 }
 
-export default AuditResultsByCategory;
+export default AuditResultsByFacility;

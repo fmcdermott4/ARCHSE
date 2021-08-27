@@ -24,7 +24,10 @@ const Navigation = () => {
               <NavDropdown.Item href="/certifications/create">Create</NavDropdown.Item>          
             </NavDropdown>
             <Nav.Link href="/safety">Safety</Nav.Link>
-            <Nav.Link href="/audits">Audits</Nav.Link>            
+            <NavDropdown title="Audits" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/audits">Conduct Audit</NavDropdown.Item>
+              <NavDropdown.Item href="/audits/auditresults/all">Audit Results</NavDropdown.Item>
+            </NavDropdown>                       
             <NavDropdown title="Other Links" id="basic-nav-dropdown">
               <NavDropdown.Item href="/login">Login</NavDropdown.Item>
               <NavDropdown.Item href="/signup">Sign Up</NavDropdown.Item>

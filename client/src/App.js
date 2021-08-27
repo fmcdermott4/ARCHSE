@@ -30,6 +30,8 @@ import PageNotFound from './pages/PageNotFound'
 import UploadFile from './components/UploadFile';
 import AuditResults from './pages/AuditResult';
 import AuditResultsByCategory from './pages/AuditResultsByCategory';
+import AuditResultsByFacility from './pages/AuditResultsByFacility';
+import AuditResultsAll from './pages/AuditResultsAll';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -107,9 +109,27 @@ function App() {
               </Route>
               <Route exact path="/procedures">
                 <Procedures />
+              </Route>              
+              <Route exact path="/audits">
+                <Audits />
               </Route>
-              <Route exact path='/audits/auditresults/:categoryId'>
+              <Route exact path="/audits/:categoryId">
+                <IndividualAudit />
+              </Route>
+              <Route exact path='/audits/auditresults/all'>
+                <AuditResultsAll />
+              </Route>
+              <Route exact path='/audits/auditresults/category/:categoryId'>
                 <AuditResultsByCategory />
+              </Route>
+              <Route exact path='/audits/auditresults/facility/:facilityId'>
+                <AuditResultsByFacility />
+              </Route>              
+              <Route exact path='/audits/auditresults/:auditId'>
+                <AuditResults />
+              </Route>
+              <Route exact path ="/profile/:userId">
+                <Profile />
               </Route>
               <Route exact path="/certifications/certify">
                 <CertificationsCertify />
@@ -119,18 +139,6 @@ function App() {
               </Route>
               <Route exact path="/certifications/review">
                 <CertificationsReview/>
-              </Route>
-              <Route exact path="/audits">
-                <Audits />
-              </Route>
-              <Route exact path="/audits/:categoryId">
-                <IndividualAudit />
-              </Route>
-              <Route exact path ="/auditresults/:auditId">
-                <AuditResults />
-              </Route>
-              <Route exact path ="/profile/:userId">
-                <Profile />
               </Route>
               <Route path ="*">
                 <PageNotFound />

@@ -364,3 +364,34 @@ export const QUERY_AUDITS_BY_CATEGORY = gql`
     }
   }
 `;
+export const QUERY_AUDITS_BY_FACILITY = gql`
+  query auditsByFacility($facilityId:ID){
+    auditsByFacility(facility:$facilityId){
+      _id
+      profile{
+        _id
+        name
+      }
+      category{
+        _id
+        category
+        auditType
+        questions{
+          section
+          question
+          correctAnswer
+        }
+      }
+      timeSubmitted
+      answers{
+        _id
+        question
+        answer
+      }
+      facility{
+        _id
+        facility
+      }    
+    }
+  }
+`;

@@ -61,6 +61,13 @@ const resolvers = {
     auditsByCategory: async (parent, {category})=>{
       return await Audit.find({category: category}).populate('profile category facility ')
     },
+    auditsByFacility: async (parent, {facility})=>{
+      return await Audit.find({facility: facility}).populate('profile category facility ')
+    },
+    allAudits: async (parent, {auditId, profile, category, timeSubmitted, facility})=>{
+      return await Audit.find({_id: auditId, profile: profile, category:category, timeSubmitted:{$gte:timeSubmitted}, facility:facility}).populate('profile category facility ')
+      // return await Audit.find({}).populate('profile category facility ')
+    },
   },  
   Mutation: {
     addProfile: async (parent, { name, email, password }) => {

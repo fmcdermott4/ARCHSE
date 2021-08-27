@@ -101,6 +101,8 @@ type Query {
     reportingStructures:[ReportingStructure]
     reportingStructure(profileId: ID): ReportingStructure
     auditsByCategory(category: ID):[Audit]
+    auditsByFacility(facility: ID):[Audit]
+    allAudits(auditId:ID, profile:ID, category:ID, timeSubmitted:String, facility:ID):[Audit]
     
 }
 type Mutation {

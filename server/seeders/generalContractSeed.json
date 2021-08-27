@@ -1,0 +1,63 @@
+[
+    {
+        "category": "Contract",
+        "auditType": "Paperwork",
+        "questions": [
+            {
+                "section": "N/A",
+                "question": "Does a contract exist for this customer?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "N/A",
+                "question": "If changes to the original contract have been negotiated are those addendums, amendments, emails, etc approved, documented and available?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "N/A",
+                "question": "Can this facility provide contracts, addendums, amendments, emails, etc for all customers serviced at this location?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "N/A",
+                "question": "Can this facility provide policies, standards and standard operating procedures to show facility responsibilities for current requirements of a contract?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "N/A",
+                "question": "Do the facility provided policies, standards and standard operating procedures effectively address all contractual requirements?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "N/A",
+                "question": "?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            }
+        ]
+    }
+]

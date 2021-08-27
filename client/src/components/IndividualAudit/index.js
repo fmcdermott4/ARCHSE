@@ -70,7 +70,6 @@ const IndividualAudit = () => {
             });
             
         }
-        console.log(formState)
     };
     // define submitAudit
     const [submitAudit, { error }] = useMutation(SUBMIT_AUDIT);

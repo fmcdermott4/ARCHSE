@@ -1,0 +1,242 @@
+[
+    {
+        "category": "Amazon",
+        "auditType": "Contract",
+        "questions": [
+            {
+                "section": "N/A",
+                "question": "Does a contract exist for this customer?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract I.D",
+                "question": "Are data wipes being conducted in accordance with NIST 800-88 Secure Erase?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract I.D",
+                "question": "If facility finds discriminating, offensive or criminal relevant data or information on any good, does facility report findings to relevant authorities?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract I.D",
+                "question": "Before any new product line is processed by facility, has the process been audited and approved by Amazon?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract I.D",
+                "question": "For goods containing internal memory for which memory wiping cannot be completed to NIST 800-88 Secure Erase standard, are those goods being destroyed or recycled in commodity form?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract II.B.1",
+                "question": "Are the costs of services for items deemed beyond economical repair (BER) covered by facility unless otherwise justified in Amazon's reasonable discretion?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract II.B.2",
+                "question": "Is facility using Amazon approved parts suppliers?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract II.B.3",
+                "question": "Is facility purchasing parts from Amazon authorized vendors or distributors directly?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract II.C",
+                "question": "Can facility produce Work Instructions as a procedure upon which goods are tested for functionality?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract III.C",
+                "question": "Is pricing offer to Amazon for Inventory Repair Services as favorable as that offered to other customers receiving services similar to Amazon?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract III.C",
+                "question": "If pricing for Inventory Repair Services offered to customer is more favorable than the terms offered to Amazon, has Amazon been notified of those terms?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract III.C",
+                "question": "If Amazon elects for pricing similar to other cutomers serviced by ARC, is the change in pricing applied effective as of the date such terms were offered to the other customer?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract IV.A",
+                "question": "Does facility comply with all Amazon reporting requirements such as inventory reports, tracking by Amazon identification number, repair analysis, backlog report, cycle time analysis and monthly invoice summary?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract V.B",
+                "question": "Does facility have and maintain valid title, or valid leasehold interest for facility?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract V.B",
+                "question": "Is an Amazon product assessed, processed and stored in same service location?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract V.B",
+                "question": "Is facility secure and safe?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract V.B",
+                "question": "Are goods stored and processed in such a way that they do not become mixed with any other goods or equipment from a third party?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract V.D",
+                "question": "Does an insurance plan exist to cover the full replacement of all Amazon goods within the custody of the facility?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            }            
+        ]
+    },
+    {
+        "category": "General",
+        "auditType": "Contract",
+        "questions": [
+            {
+                "section": "N/A",
+                "question": "Does a contract exist for this customer?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "N/A",
+                "question": "If changes to the original contract have been negotiated, are those addendums, amendments, emails, etc approved, documented and available?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "N/A",
+                "question": "Can this facility provide contracts, addendums, amendments, emails, etc for all customers serviced at this location?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "N/A",
+                "question": "If this facility provides services for multiple customers, are customers items completely separated for storage?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "N/A",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "N/A",
+                "question": "Is facility of an appropriate size for the programs is it responsible for?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "Amazon Contract V.B",
+                "question": "Is facility secure and safe?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            }
+        ]
+    }
+]
