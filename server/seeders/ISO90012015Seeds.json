@@ -1,0 +1,489 @@
+[
+    {
+        "category": "Context of the Organization",
+        "auditType": "ISO 9001:2015",
+        "questions": [
+            {
+                "section": "ISO 9001:2015 4.1",
+                "question": "Has the organization determined the external and internal issues relevant to its purpose and its strategic direction and that affect its ability to achieve the intended result(s) of its quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.1",
+                "question": "Does the organization monitor and review the information about the external and internal issues relevant to its purpose and its strategic direction and that affect its ability to achieve the intended result(s) of its quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.2",
+                "question": "Has the organization determined the interested parties that are relevant to the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.2",
+                "question": "Has the organization determined the requirements of the interested parties that are relevant to the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.2",
+                "question": "Does the organization monitor and review information about the interested parties that are relevant to the quality management system and their relevant requirements?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.3",
+                "question": "Has the organization determined the boundaries and applicability of the quality management system when determining the quality maagement system's scope?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.3.a",
+                "question": "When determining the quality management system's scope, did the organization consider external and internal issues?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.3.b",
+                "question": "When determining the quality management system's scope, did the organization consider the requirements of relevant interested parties?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.3.c",
+                "question": "When determining the quality management system's scope, did the organization consider the products and services of the organization?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.3",
+                "question": "Does the organization apply all requirements of ISO 9001:2015 as applicable within the determined scope of its quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.3",
+                "question": "Is the determined scope of the organization's quality management system available as documented information?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.3",
+                "question": "Does the documented scope of the quality management system state the types of products and services covered, and provide justification for any requirement of ISO 9001:2015 that the organization determined is not applicable to the scope of the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1",
+                "question": "Has the organization established and implemented a quality management system, including the processes needed and their interactions, in accordance with ISO 9001:2015?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1",
+                "question": "Does the organization maintain and continually improve the quality management system, including the processes needed and their interactions, in accordance with ISO 9001:2015?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "n/a",
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1",
+                "question": "Has the organization determined the processes needed for the quality management system and their application throughout the organization?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1.a",
+                "question": "Has the organization determined the inputs required and the outputs expected from processes needed for the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1.b",
+                "question": "Has the organization determined the sequence of interaction of the processes needed for the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1.c",
+                "question": "Has the organization determined and applied the criteria and methods needed to ensure the effective operations and control of processes needed for the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1.d",
+                "question": "Has the organization determined the resources needed and ensured the availability of those resources for processes needed for the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1.e",
+                "question": "Has the organization assigned the responsibilities and authorities for processes needed for the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1.f",
+                "question": "Has the organization addressed the risks and opportunities as determined in accordance with ISO 9001:2015 6.1 for processes needed for the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1.g",
+                "question": "Has the organization evaluated the processes and implemented any changes needed to ensure these processes achieve their intended results for processes needed for the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.1.h",
+                "question": "Has the organization made imporvements to the processes needed for the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.2",
+                "question": "Does the organization maintain documented information to support the operation of its processes?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 4.4.2",
+                "question": "Does the organization retain documented information to ensure confidence that the processes of its quality management system are being carried out as planned?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Leadership",
+        "auditType": "ISO 9001:2015",
+        "questions": [
+            {
+                "section": "ISO 9001:2015 5.1.1.a",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by taking accountability for the effectiveness of the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.1.b",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by ensuring that the quality policy and policy objectives are established for the quality management system and are compatible with the contect and strategic direction of the organization?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.1.c",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by ensuring the integration of the quality management system into the organization's business processes?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.1.d",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by promoting the use of process approach and risk-based thinking?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.1.e",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by ensuring that the resources needed for the quality management system are available?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.1.f",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by communicating the importance of effective quality management and of conforming to the quality management system requirements?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.1.g",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by ensuring that the quality management system achieces its intended results?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.1.h",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by engaging, directing, and supporting persons to contribute to the effectiveness of the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.1.i",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by promoting improvement?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.1.j",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by supporting other relevant management roles to demonstrate their leadership as it applies to their areas of responsibility?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.2.a",
+                "question": "Does top management demonstrate leadership and commitment with respect to customer focus by ensuring that customers and applicable statutory and regulatory requirements are determined, understood and consistently met?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.2.b",
+                "question": "Does top management demonstrate leadership and commitment with respect to customer focus by ensuring that the risks and opportunities that can affect conformity of products and services and the ability to enhance customer satisfaction are determined and addressed?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.1.2.c",
+                "question": "Does top management demonstrate leadership and commitment with respect to customer focus by ensuring that the focus on enhancing customer satisfaction is maintained?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.2.1.a",
+                "question": "Has top management established, implemented and maintined a quality policy that is appropriate to the purpose and context of the organization and supports its strategic direction?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.2.1.b",
+                "question": "Has top management established, implemented and maintined a quality policy that provides a framework for setting quality objectives?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.2.1.c",
+                "question": "Has top management established, implemented and maintined a quality policy that includes a commitment to satisfy applicable requirements?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.2.1.d",
+                "question": "Has top management established, implemented and maintined a quality policy that includes a commitment to continual improvement of the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.2.2.a",
+                "question": "Is the quality policy available and maintained as documented information?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.2.2.b",
+                "question": "Is the quality policy communicated, understood and applied within the organization?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.2.2.c",
+                "question": "Is the quality policy available to relevant interested parties, as appropriate?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.3",
+                "question": "Does top management ensure that the responsibilities and authorities for relevant roles are assigned, communicated and understood within the organization?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.3.a",
+                "question": "Does top management assign the responsibility and authority for ensuring that the quality management system conforms to the requirements of ISO 9001:2015?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.3.b",
+                "question": "Does top management assign the responsibility and authority for ensuring that the processes are delivering their intended results?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.3.c",
+                "question": "Does top management assign the responsibility and authority for reporting on the performance of the quality management system and on opportunities for improvement , in particular to top management?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.3.d",
+                "question": "Does top management assign the responsibility and authority for ensuring the promotion of customer focus throughout the organization?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "section": "ISO 9001:2015 5.3.e",
+                "question": "Does top management assign the responsibility and authority for ensuring that the integrity of the quality management system is maintained when changes to the quality management system are planned and implemented?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Planning",
+        "auditType": "ISO 9001:2015",
+        "questions": [
+            {
+                "section": "ISO 9001:2015 6.1.1",
+                "question": "Does top management demonstrate leadership and commitment with respect to the quality management system by taking accountability for the effectiveness of the quality management system?",
+                "correctAnswer": "Yes",
+                "answers": [
+                    "Yes",
+                    "No"
+                ]
+            }
+        ]
+    }
+]
